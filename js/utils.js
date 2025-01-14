@@ -10,8 +10,8 @@ const possuiCasasDecimais = (numero) => numero % 1 !== 0;
 const criarElemento = (tag, { text = '', className = '', children = [], attributes = {} } = {}) => {
   const elemento = document.createElement(tag);
 
-  if (text) elemento.innerHTML = text;
-  if (className) elemento.className = className;
+  elemento.innerHTML = text;
+  elemento.className = className;
   Object.entries(attributes).forEach(([key, value]) => elemento.setAttribute(key, value));
 
   children.forEach((child) => elemento.appendChild(child));
