@@ -1,0 +1,8 @@
+.header-top {
+  color: var(--yellow-1);
+  background-color: var(--yellow-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: .5rem;
+}
