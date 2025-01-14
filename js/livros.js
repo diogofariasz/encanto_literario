@@ -10,7 +10,7 @@ function criarLivro({ title, image_url, assessment, price, shipping }) {
     return Imagem('./assets/icons/gray-star.svg', 'Estrela cinza');
   });
 
-  return criarElemento('div', {
+  return Div({
     className: 'livro',
     children: [
       Imagem(image_url, 'Capa do livro', 'livro-capa'),
