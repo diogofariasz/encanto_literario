@@ -16,3 +16,55 @@
 .icon {
   color: var(--purple-3);
 }
+
+.header-mid {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+.header-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.input-container {
+  display: flex;
+  gap: .5rem;
+}
+
+.input-container input {
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  color: var(--purple-4);
+  border: 2px solid var(--purple-4);
+  outline: none;
+}
+
+.input-container input::placeholder {
+  color: var(--purple-4);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: .5rem;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: var(--purple-2);
+  padding: .5rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
