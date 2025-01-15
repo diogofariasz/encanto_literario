@@ -46,6 +46,14 @@ function criarLivro({ title, image_url, assessment, price, shipping }) {
 
 const elementoLivros = document.querySelector('.livros');
 
-livros.forEach((livro) => {
+// ordenadores
+const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
+const ordenarPorMelhorAvaliado = (a, b) => b.assessment.value - a.assessment.value
+
+// aplicação do ordenador
+const livrosOrdenados = livros.slice().sort(ordenarPorMelhorAvaliado);
+
+// listagem dos livros ordenados
+livrosOrdenados.forEach((livro) => {
   elementoLivros.appendChild(criarLivro(livro));
 });

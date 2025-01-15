@@ -24,73 +24,100 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-top">
-        50% de Desconto em Todos os Livros (Apenas hoje)
-      </div>
+      <div class="header-top">50% de Desconto em Todos os Livros (Apenas hoje)</div>
 
       <div class="header-mid">
         <div class="input-container">
-          <input type="text" placeholder="O que você deseja?" id="search">
+          <input type="text" placeholder="O que você deseja?" id="search" />
           <div class="button">
-            <i data-lucide="search" style='color: var(--purple-3)'></i>
+            <i data-lucide="search" style="color: var(--purple-3)"></i>
           </div>
         </div>
 
         <div class="header-logo">
-          <img src="assets/logo.svg" alt="logo">
+          <img src="assets/logo.svg" alt="logo" />
           <p>Encanto Literário</p>
         </div>
 
         <div class="header-buttons">
-          <div class="button" style="background-color: var(--gray-3);">
-            <i data-lucide="shopping-cart" style='color: var(--purple-3)'></i>
+          <div class="button" style="background-color: var(--gray-3)">
+            <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
           </div>
-          
-          <div class="button" style="background-color: var(--gray-3);">
-            <i data-lucide="user-round" style='color: var(--purple-3)'></i>
+
+          <div class="button" style="background-color: var(--gray-3)">
+            <i data-lucide="user-round" style="color: var(--purple-3)"></i>
           </div>
         </div>
       </div>
 
       <nav class="header-bottom">
+        <div class="header-bottom-container">
+          <div class="dropdown">
+            <div class="dropdown-button">
+              <p>Categorias de Livro</p>
+              <i data-lucide="chevron-down"></i>
+            </div>
+  
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-option">Fantasia</div>
+              <div class="dropdown-menu-option">Misterio</div>
+              <div class="dropdown-menu-option">Terror</div>
+              <div class="dropdown-menu-option">Romance</div>
+              <div class="dropdown-menu-option">Autoajuda</div>
+              <div class="dropdown-menu-option">Infantil</div>
+              <div class="dropdown-menu-option">Aventura</div>
+              <div class="dropdown-menu-option">Drama</div>
+              <div class="dropdown-menu-option">Ficção cientifica</div>
+              <div class="dropdown-menu-option">Mangá</div>
+              <div class="dropdown-menu-option">Poesia</div>
+            </div>
+          </div>
 
+          <div class="dropdown">
+            <div class="dropdown-button">
+              <p>Categorias de Mangá</p>
+              <i data-lucide="chevron-down"></i>
+            </div>
+  
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-option">Fantasia</div>
+            </div>
+          </div>
+        </div>
       </nav>
-      
     </header>
 
-    <div class="livros">
-    </div>
-
+    <div class="livros"></div>
 
 <footer class="rodape" id="contato">
-    <div class="completed">
+    <div class="rodape-div">
 
         <div class="rodape-div-1">
             <div class="rodape-div-1-coluna">
 
-                <img src="assets/logo.svg" alt="">
+                <span><b>LOGO</b></span>
                 
             </div>
         </div>
 
         <div class="rodape-div-2">
-          <div class="rodape-div-2-coluna">
+          <div class="rodape-div-3-coluna">
 
-              <b>Realizado por:</b>
+              <span><b>Realizado por:</b></span>
               <p>Diogo Emanuel</p>
               <p>Igor Ádrian</p>
               <p>Luiz Felipe</p>
           </div>
-      </div>
+        </div>
 
         <div class="rodape-div-3">
             <div class="rodape-div-3-coluna">
 
-                <b>Precisa de suporte?</b>
-                <p><a href="#">Chat Online</a></p>
-                <p><a href="#">Email</a></p>
-                <p><a href="#">Assistência Online</a></p>
-                <p><a href="#">Fale conosco</a></p>
+                <span><b>Precisa de suporte?</b></span>
+                <p>Chat Online</p>
+                <p>Email</p>
+                <p>Assistência Online</p>
+                <p>Fale conosco</p>
             </div>
         </div>
 
@@ -98,16 +125,16 @@
             <div class="rodape-div-4-coluna">
 
                 <span><b>SIGA-NOS:</b></span>
-                <a href="#"><i data-lucide="twitter"></i></a>
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="facebook"></i></a>
+                <i data-lucide="twitter"></i>
+                <i data-lucide="instagram"></i>
+                <i data-lucide="facebook"></i>
             </div>
         </div>
 
 
 
     </div>
-    <center><p class="copy">Copyright © 2025 – Todos os Direitos Reservados.</p></center>
+    <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
 </footer>
 
   </body>
