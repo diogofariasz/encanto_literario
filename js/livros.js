@@ -42,7 +42,7 @@ function criarLivro({ title, image_url, assessment, price, shipping }) {
       ),
     ],
   });
-};
+}
 
 const elementoLivros = document.querySelector('.livros');
 

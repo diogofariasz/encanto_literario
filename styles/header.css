@@ -6,3 +6,13 @@
   justify-content: center;
   padding-block: .5rem;
 }
+
+.logo p {
+  font-family: Rosario, Arial, Helvetica, sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--gray-1);
+}
+
+.icon {
+  color: var(--purple-3);
+}

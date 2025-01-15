@@ -10,7 +10,7 @@
   box-sizing: border-box;
   font-family: Inter, Arial, Helvetica, sans-serif;
 
-  /* Julius Sans One Rosario */
+  /* Julius Sans One */
 }
 
 :root {
@@ -18,11 +18,12 @@
   --purple-1: #180047;
   --purple-2: #5D17EB;
   --purple-3: #A782F1;
-  --purple-4: #A782F1;
+  --purple-4: #A094BA;
 
-  --gray-1: #838383;
-  --gray-1: #D4D4D4;
-  --gray-1: #DFDFDF;
+  --gray-1: #313131;
+  --gray-2: #838383;
+  --gray-3: #D4D4D4;
+  --gray-4: #DFDFDF;
 
   --yellow-1: #848B00;
   --yellow-2: #FFFAB3;
