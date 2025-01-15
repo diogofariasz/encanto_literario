@@ -27,4 +27,9 @@
 
   --yellow-1: #848B00;
   --yellow-2: #FFFAB3;
+
+  --green-1: #94BAA2;
+
+  /* Configurações */
+  --tamanho-tela: 1080px;
 }

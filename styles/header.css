@@ -1,3 +1,8 @@
+.header {
+  position: fixed;
+  width: 100%;
+}
+
 .header-top {
   color: var(--yellow-1);
   background-color: var(--yellow-2);
@@ -18,15 +23,12 @@
 }
 
 .header-mid {
-  max-width: 1080px;
-  margin-inline: auto;
-}
-
-.header-mid {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 1rem;
+  max-width: var(--tamanho-tela);
+  margin-inline: auto;
 }
 
 .input-container {
@@ -44,6 +46,15 @@
 
 .input-container input::placeholder {
   color: var(--purple-4);
+}
+
+.input-container input:focus {
+  border: 2px solid var(--green-1);
+  color: var(--green-1);
+}
+
+.input-container input:focus::placeholder {
+  color: var(--green-1);
 }
 
 .header-logo {
@@ -67,4 +78,9 @@
   justify-content: center;
 
   cursor: pointer;
+  transition: 500ms;
+}
+
+.button:hover {
+  opacity: .8;
 }
