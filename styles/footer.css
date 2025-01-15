@@ -1,0 +1,48 @@
+rodape{
+    
+    
+}
+
+.completed{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: #D4D4D4;
+    width: 100%;
+    display: flex;
+    color: #313131;
+    padding-bottom: 1rem;
+}
+.rodape-div-1-coluna{
+  display: flex;  
+  margin-left: 70%;
+  margin-top: 25%;
+}
+.rodape-div-2{
+    margin-left: 20%;
+}
+
+.rodape-div-3{
+    margin-left: 10%;
+}
+
+.rodape-div-4{
+    display: block;
+    flex-direction: column;
+    margin-left: 15%;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #313131;
+}
+.copy{
+    background-color: #A782F1;
+    color: 313131;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
