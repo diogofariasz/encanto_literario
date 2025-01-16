@@ -1,5 +1,6 @@
 /* .header {
   position: fixed;
+  top: 0;
   width: 100%;
 } */
 
@@ -15,7 +16,6 @@
 .icon {
   color: var(--purple-3);
 }
-
 
 .header-mid-container {
   max-width: var(--tamanho-tela);
@@ -111,7 +111,7 @@
   gap: 0.5rem;
   cursor: pointer;
   background-color: var(--purple-5);
-  padding: .8rem .5rem;
+  padding: 0.8rem 0.5rem;
   color: var(--purple-1);
 }
 
@@ -133,10 +133,10 @@
 }
 
 .dropdown-menu-option {
-  padding: .25rem;
+  padding: 0.25rem;
   cursor: pointer;
 }
 
 .dropdown-menu-option:hover {
-  opacity: .4;
+  opacity: 0.4;
 }
