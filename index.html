@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
 
-
     <script defer src="js/data.js"></script>
     <script defer src="js/utils.js"></script>
     <script defer src="js/livros.js"></script>
@@ -27,25 +26,27 @@
       <div class="header-top">50% de Desconto em Todos os Livros (Apenas hoje)</div>
 
       <div class="header-mid">
-        <div class="input-container">
-          <input type="text" placeholder="O que você deseja?" id="search" />
-          <div class="button">
-            <i data-lucide="search" style="color: var(--purple-3)"></i>
-          </div>
-        </div>
-
-        <div class="header-logo">
-          <img src="assets/logo.svg" alt="logo" />
-          <p>Encanto Literário</p>
-        </div>
-
-        <div class="header-buttons">
-          <div class="button" style="background-color: var(--gray-3)">
-            <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+        <div class="header-mid-container">
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
+            </div>
           </div>
 
-          <div class="button" style="background-color: var(--gray-3)">
-            <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+          <div class="header-logo">
+            <img src="assets/logo.svg" alt="logo" />
+            <p>Encanto Literário</p>
+          </div>
+
+          <div class="header-buttons">
+            <div class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
+            <div class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -57,7 +58,7 @@
               <p>Categorias de Livro</p>
               <i data-lucide="chevron-down"></i>
             </div>
-  
+
             <div class="dropdown-menu">
               <div class="dropdown-menu-option">Fantasia</div>
               <div class="dropdown-menu-option">Misterio</div>
@@ -68,7 +69,6 @@
               <div class="dropdown-menu-option">Aventura</div>
               <div class="dropdown-menu-option">Drama</div>
               <div class="dropdown-menu-option">Ficção cientifica</div>
-              <div class="dropdown-menu-option">Mangá</div>
               <div class="dropdown-menu-option">Poesia</div>
             </div>
           </div>
@@ -78,7 +78,7 @@
               <p>Categorias de Mangá</p>
               <i data-lucide="chevron-down"></i>
             </div>
-  
+
             <div class="dropdown-menu">
               <div class="dropdown-menu-option">Fantasia</div>
             </div>
@@ -89,53 +89,46 @@
 
     <div class="livros"></div>
 
-<footer class="rodape" id="contato">
-    <div class="rodape-div">
+    <footer class="footer">
+      <div class="footer-informations">
+        <div class="footer-informations-container">
+          <div class="footer-column">
+            <img src="assets/logo.svg" alt="logo" />
+          </div>
 
-        <div class="rodape-div-1">
-            <div class="rodape-div-1-coluna">
-
-                <span><b>LOGO</b></span>
-                
+          <div class="footer-column">
+            <p>Realizado por:</p>
+            <div class="footer-column-info">
+              <a href="https://github.com/diogofariasz"><p>Diogo Emanuel</p></a>
+              <a href="https://github.com/adrian5g"><p>Igor Ádrian</p></a>
+              <a href="https://github.com/LuizFelipe505"><p>Luiz Felipe</p></a>
             </div>
-        </div>
+          </div>
 
-        <div class="rodape-div-2">
-          <div class="rodape-div-3-coluna">
+          <div class="footer-column">
+            <p>Precisa de suporte?</p>
+            <div class="footer-column-info">
+              <a href="#"><p>Chat Online</p></a>
+              <a href="#"><p>Email</p></a>
+              <a href="#"><p>Assistência Online</p></a>
+              <a href="#"><p>Fale conosco</p></a>
+            </div>
+          </div>
 
-              <span><b>Realizado por:</b></span>
-              <p>Diogo Emanuel</p>
-              <p>Igor Ádrian</p>
-              <p>Luiz Felipe</p>
+          <div class="footer-column">
+            <p>Siga-nos:</p>
+            <div class="footer-social">
+              <a href="#"><i data-lucide="twitter"></i></a>
+              <a href="#"><i data-lucide="instagram"></i></a>
+              <a href="#"><i data-lucide="facebook"></i></a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="rodape-div-3">
-            <div class="rodape-div-3-coluna">
-
-                <span><b>Precisa de suporte?</b></span>
-                <p>Chat Online</p>
-                <p>Email</p>
-                <p>Assistência Online</p>
-                <p>Fale conosco</p>
-            </div>
-        </div>
-
-        <div class="rodape-div-4">
-            <div class="rodape-div-4-coluna">
-
-                <span><b>SIGA-NOS:</b></span>
-                <i data-lucide="twitter"></i>
-                <i data-lucide="instagram"></i>
-                <i data-lucide="facebook"></i>
-            </div>
-        </div>
-
-
-
-    </div>
-    <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
-</footer>
-
+      <div class="footer-rights">
+        <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>
