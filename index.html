@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/livros.css" />
     <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/footer.css" />
 
     <script defer src="js/data.js"></script>
@@ -54,7 +55,7 @@
       <nav class="header-bottom">
         <div class="header-bottom-container">
           <div class="dropdown">
-            <div class="dropdown-button">
+            <div class="navigation-button">
               <p>Categorias de Livro</p>
               <i data-lucide="chevron-down"></i>
             </div>
@@ -74,7 +75,7 @@
           </div>
 
           <div class="dropdown">
-            <div class="dropdown-button">
+            <div class="navigation-button">
               <p>Categorias de Mangá</p>
               <i data-lucide="chevron-down"></i>
             </div>
@@ -83,9 +84,31 @@
               <div class="dropdown-menu-option">Fantasia</div>
             </div>
           </div>
+
+          <div class="navigation-button" style="background-color: var(--purple-4)">
+            <p>Mais Vendidos</p>
+            <i data-lucide="trending-up"></i>
+          </div>
+
+          <div class="navigation-button" style="background-color: var(--purple-4)">
+            <p>Ofertas do Dia</p>
+            <i data-lucide="badge-percent"></i>
+          </div>
         </div>
       </nav>
     </header>
+
+    <div class="hero">
+      <div class="hero-container">
+        <div class="hero-logo">
+          <img src="assets/logo.svg" alt="logo">
+          <p>Encanto</p>
+          <span>Literário</span>
+        </div>
+
+        <p class="hero-slogan">Livros novos a preços especiais</p>
+      </div>
+    </div>
 
     <div class="livros"></div>
 
