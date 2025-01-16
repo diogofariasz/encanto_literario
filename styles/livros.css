@@ -7,7 +7,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: center;
   justify-content: center;
 }
 
@@ -19,6 +18,12 @@
   padding: 1rem;
   border: 1px solid var(--gray-4);
   border-radius: 1rem;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.livro:hover {
+  scale: 1.1;
 }
 
 .livro-capa {
