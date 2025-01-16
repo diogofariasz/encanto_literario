@@ -44,7 +44,7 @@ function criarLivro({ title, image_url, assessment, price, shipping }) {
   });
 }
 
-const elementoLivros = document.querySelector('.livros');
+const elementoLivros = document.querySelector('.livros-container');
 
 // ordenadores
 const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value

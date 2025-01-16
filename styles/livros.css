@@ -1,5 +1,14 @@
 .livros {
+  max-width: calc(var(--tamanho-tela) + 300px);
+  margin-inline: auto;
+}
+
+.livros-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .livro {
@@ -7,11 +16,19 @@
   flex-direction: column;
   gap: .5rem;
   align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--gray-4);
+  border-radius: 1rem;
 }
 
 .livro-capa {
-  width: 126px;;
-  height: 189px
+  width: 126px;
+  height: 189px;
+}
+
+.livro-titulo {
+  max-width: 200px;
+  text-align: center;
 }
 
 .livro-avaliacao {
