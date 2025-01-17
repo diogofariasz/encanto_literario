@@ -20,7 +20,7 @@ const livros = [
     desc: 'Todos em Little Kilton conhecem essa história. Andie Bell, a garota mais bonita e popular da escola, foi assassinada pelo namorado, Sal Singh, que se suicidou após o crime. Na época, não se falava em outra coisa. Cinco anos depois, Pip ainda vê as marcas que a tragédia deixou na cidade, desde as matérias tendenciosas da imprensa local até o ostracismo da família das vítimas. Mas a garota tem a impressão de que há peças faltando nesse quebra-cabeça. Ela conhecia Sal desde a infância, e ele sempre foi gentil. Por que teria se tornado um assassino? E será que Andie era mesmo tão angelical quanto a imagem construída após a sua morte? Prestes a se formar no Ensino Médio, Pip decide analisar o crime em seu projeto de conclusão de curso e questionar alguns pontos da versão oficial. Porém, quando a pesquisa revela segredos aterrorizantes, ela percebe que se aproximar da verdade pode custar sua vida.',
   },
   {
-    title: 'The Lightning Thief: 1',
+    title: 'Percy Jackson e o Ladrão de Raios',
     assessment: {
       value: 5.0,
       amount: 984,
