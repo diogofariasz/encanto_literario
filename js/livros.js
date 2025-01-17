@@ -1,4 +1,4 @@
-function criarLivro({ title, image_url, assessment, price, shipping }) {
+function criarLivro({ id, title, image_url, assessment, price, shipping }) {
   const { value: estrelas, amount: totalAvaliacoes } = assessment;
   const estrelasInteiras = Math.floor(estrelas);
   const meiaEstrela = possuiCasasDecimais(estrelas);
@@ -10,8 +10,9 @@ function criarLivro({ title, image_url, assessment, price, shipping }) {
     return Imagem('./assets/icons/gray-star.svg', 'Estrela cinza');
   });
 
-  return Div({
+  return Link({
     className: 'livro',
+    href: `/livro.html?id=${id}`,
     children: [
       Imagem(image_url, 'Capa do livro', 'livro-capa'),
       Paragrafo(title, 'livro-titulo'),
@@ -46,14 +47,11 @@ function criarLivro({ title, image_url, assessment, price, shipping }) {
 
 const elementoLivros = document.querySelector('.livros-container');
 
-// ordenadores
-const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
+// const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
 const ordenarPorMelhorAvaliado = (a, b) => b.assessment.value - a.assessment.value
 
-// aplicação do ordenador
 const livrosOrdenados = livros.slice().sort(ordenarPorMelhorAvaliado);
 
-// listagem dos livros ordenados
 livrosOrdenados.forEach((livro) => {
   elementoLivros.appendChild(criarLivro(livro));
 });

@@ -48,12 +48,12 @@
 }
 
 .input-container input:focus {
-  border: 2px solid var(--green-1);
-  color: var(--green-1);
+  border: 2px solid var(--purple-2);
+  color: var(--purple-2);
 }
 
 .input-container input:focus::placeholder {
-  color: var(--green-1);
+  color: var(--purple-2);
 }
 
 .header-logo {
