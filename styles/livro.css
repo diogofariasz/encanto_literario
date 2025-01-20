@@ -1,0 +1,89 @@
+.info-container {
+  max-width: var(--tamanho-tela);
+  margin-inline: auto;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.book-info {
+  display: flex;
+  gap: 2rem;
+  border: 1px solid var(--gray-3);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.book-image {
+  height: 368px;
+  width: 245px;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.book-details-title {
+  font-size: 2rem;
+}
+
+.book-details-rate {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.book-details-rate-amount {
+  color: var(--gray-2);
+}
+
+.book-details-description {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.purchase-info {
+  display: flex;
+  gap: 2rem;
+  border: 1px solid var(--gray-3);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  height: max-content;
+  flex-direction: column;
+}
+
+.purchase-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-price-discount {
+  width: max-content;
+  font-size: 16px;
+  color: var(--red-1);
+  text-transform: uppercase;
+}
+
+.purchase-price-discount-percent {
+  font-size: 24px;
+}
+.purchase-price-promotion {
+  width: max-content;
+  font-size: 32px;
+}
+
+.purchase-price-original {
+  width: max-content;
+  color: var(--gray-1);
+}
+
+.purchase-price-original-amount {
+  text-decoration: line-through;
+}
+
+.purchase-shipping-radius {
+  text-transform: uppercase;
+}

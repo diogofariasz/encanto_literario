@@ -1,5 +1,5 @@
 .hero {
-  max-width: 80%;
+  max-width: var(--tamanho-tela);
   margin: 4rem auto;
 }
 

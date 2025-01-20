@@ -1,3 +1,18 @@
+const formatarNumeroComDesconto = ({ amount, discount, currency }) => {
+  const discountPercent = discount / 100;
+  const discountValue = amount * discountPercent
+  const priceWithDiscount = amount - discountValue;4
+
+  return priceWithDiscount.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency,
+  });
+};
+
+const formatarNumero = (number) => {
+  return number.toLocaleString('pt-BR');
+};
+
 const formatarDinheiro = ({ amount, currency }) => {
   return amount.toLocaleString('pt-BR', {
     style: 'currency',
@@ -19,11 +34,14 @@ const criarElemento = (tag, { text = '', className = '', children = [], attribut
   return elemento;
 };
 
-const Div = ({ text, className, children = [] }) => criarElemento('div', { text, className, children });
+const Div = ({ text, className, children = [] }) =>
+  criarElemento('div', { text, className, children });
 
-const Link = ({ text, href, className, children = [] }) => criarElemento('a', { text, className, children, attributes: { href }});
+const Link = ({ text, href, className, children = [] }) =>
+  criarElemento('a', { text, className, children, attributes: { href } });
 
-const Imagem = (src, alt, className) => criarElemento('img', { className, attributes: { src, alt } });
+const Imagem = (src, alt, className) =>
+  criarElemento('img', { className, attributes: { src, alt } });
 
 const Paragrafo = (text, className) => criarElemento('p', { text, className });
 

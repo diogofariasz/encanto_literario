@@ -1,3 +1,6 @@
+const url = new URL(window.location.href);
+const filter = url.searchParams.get('filter');
+
 function criarLivro({ id, title, image_url, assessment, price, shipping }) {
   const { value: estrelas, amount: totalAvaliacoes } = assessment;
   const estrelasInteiras = Math.floor(estrelas);
@@ -23,13 +26,16 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
             className: 'avaliacao-estrelas',
             children: avaliacoesEstrelas,
           }),
-          Span(`(${totalAvaliacoes})`, 'avaliacao-quantidade'),
+          Span(`(${formatarNumero(totalAvaliacoes)})`, 'avaliacao-quantidade'),
         ],
       }),
       Div({
         className: 'livro-preco',
         children: [
-          Paragrafo(`${formatarDinheiro(price)} ${Span('no pix').outerHTML}`, 'livro-preco-pix'),
+          Paragrafo(
+            `${formatarNumeroComDesconto(price)} ${Span('no pix').outerHTML}`,
+            'livro-preco-pix'
+          ),
           Paragrafo(`com ${price.discount}% de desconto`, 'livro-desconto'),
         ],
       }),
@@ -48,10 +54,17 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
 const elementoLivros = document.querySelector('.livros-container');
 
 // const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
-const ordenarPorMelhorAvaliado = (a, b) => b.assessment.value - a.assessment.value
+const ordenarPorMelhorAvaliado = (a, b) => b.assessment.value - a.assessment.value;
 
 const livrosOrdenados = livros.slice().sort(ordenarPorMelhorAvaliado);
 
-livrosOrdenados.forEach((livro) => {
-  elementoLivros.appendChild(criarLivro(livro));
-});
+if (filter) {
+  const compareFilter = filter.toLowerCase()
+
+  livrosOrdenados.forEach((livro) => {
+    if (compareFilter === livro.category.toLocaleLowerCase()) 
+      elementoLivros.appendChild(criarLivro(livro));
+  });
+} else {
+  livrosOrdenados.forEach((livro) => elementoLivros.appendChild(criarLivro(livro)));
+}

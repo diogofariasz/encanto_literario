@@ -135,6 +135,7 @@
 .dropdown-menu-option {
   padding: 0.25rem;
   cursor: pointer;
+  color: var(--purple-1);
 }
 
 .dropdown-menu-option:hover {

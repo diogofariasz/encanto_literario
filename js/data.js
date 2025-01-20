@@ -4,7 +4,7 @@ const livros = [
     title: 'Manual de assassinato para boas garotas: 1',
     assessment: {
       value: 5.0,
-      amount: 100,
+      amount: 1000,
     },
     price: {
       amount: 59.9,
@@ -70,7 +70,7 @@ const livros = [
     title: 'A sutil arte de ligar o f*da-se',
     assessment: {
       value: 2.5,
-      amount: 666,
+      amount: 890,
     },
     price: {
       amount: 50.0,
@@ -92,7 +92,7 @@ const livros = [
     title: 'A sutil arte de atrair',
     assessment: {
       value: 0.5,
-      amount: 666,
+      amount: 1534,
     },
     price: {
       amount: 29.9,
@@ -136,7 +136,7 @@ const livros = [
     title: 'Como enfrentar o ódio',
     assessment: {
       value: 4.8,
-      amount: 452,
+      amount: 3452,
     },
     price: {
       amount: 69.9,
@@ -150,7 +150,7 @@ const livros = [
     },
     image_url: 'https://m.media-amazon.com/images/I/6176SJ7k8hL._SL1500_.jpg',
     author: 'Felipe Neto',
-    category: '',
+    category: 'Autoajuda',
     desc: 'Ainda em 2009, Felipe Neto se tornou um fenômeno da internet no país. Seu conteúdo, agressivo mas bem-humorado, se direcionava inicialmente às tendências da época, mas logo se voltou também à política, em especial ao governo do Partido dos Trabalhadores (PT). No entanto, com o impeachment da ex-presidenta Dilma Rousseff, a crescente aproximação da extrema direita ao poder e o recrudescimento de discursos de ódio contra minorias, Felipe passou a questionar suas convicções. Em Como enfrentar o ódio , ele retrata seu processo de tomada de consciência política ― tão semelhante ao de milhões de brasileiros ― e o papel do ódio em sua vida, primeiro como força propulsora de sua carreira e depois como ferramenta de que ele próprio se tornou vítima, em especial durante o governo de Jair Bolsonaro. Entrelaçando sua história aos principais acontecimentos dos últimos quinze anos e oferecendo uma perspectiva única sobre a internet e seu papel na manipulação dos usuários, Felipe nos convida a usar a boa comunicação para combater o obscurantismo, o retrocesso e o ódio que assola a sociedade.',
   },
   {
@@ -172,7 +172,7 @@ const livros = [
     },
     image_url: 'https://m.media-amazon.com/images/I/91QW1z-PPNL._SL1500_.jpg',
     author: 'Felipe Neto',
-    category: '',
+    category: 'Infantil',
     desc: 'Prepare-se para uma imersão única na vida de Felipe Neto - um verdadeiro fenômeno da internet! Com quase 20 milhões de inscritos em seu canal e recordes quebrados no YouTube, ele é uma figura icônica que vai além das câmeras. Agora, você terá acesso exclusivo aos bastidores dessa estrela do universo digital! Em Felipe Neto - A vida por trás das câmeras, você descobrirá o Felipe além da persona extrovertida que conquistou milhões de fãs. Conhecerá o Felipe filho, amigo e namorado, desvendando seus segredos, manias, medos e sonhos para o futuro. Prepare-se para se surpreender com histórias nunca antes reveladas e momentos emocionantes que moldaram sua trajetória. Além disso, o livro proporciona uma experiência interativa e divertida. Você poderá se divertir com jogos, mergulhar em curiosidades surpreendentes e decorar seu ambiente com pôsteres exclusivos do Felipe Neto. A cada página, você estará mais próximo desse influenciador que conquistou o coração de milhões de pessoas. Se você já é fã, prepare-se para se apaixonar ainda mais pelo Felipe Neto. Se ainda não o conhece tão bem, essa é a sua chance de desvendar o mistério por trás desse grande fenômeno da internet. Então, embarque nessa jornada fascinante e descubra o Felipe Neto por trás das câmeras!',
   },
 ];
