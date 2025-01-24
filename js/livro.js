@@ -58,7 +58,7 @@ function criarLivro() {
             } off`,
             'purchase-price-discount'
           ),
-          Paragrafo(`${formatarNumeroComDesconto(livro.price)}`, 'purchase-price-promotion'),
+          Paragrafo(`${formatarDinheiroComDesconto(livro.price)}`, 'purchase-price-promotion'),
           Paragrafo(
             `originalmente por ${
               Span(formatarDinheiro(livro.price), 'purchase-price-original-amount').outerHTML
@@ -76,7 +76,7 @@ function criarLivro() {
             }`
           ),
           Paragrafo(
-            `Estimativa de entrega ${Strong('quarta-feira, 22 fev').outerHTML}`,
+            `Estimativa de entrega ${Strong(calcularDataComDias(livro.shipping.days)).outerHTML}`,
             'purchase-shipping-estimated'
           ),
           Paragrafo('entrega para todo o país!', 'purchase-shipping-radius'),

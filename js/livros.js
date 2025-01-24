@@ -13,6 +13,8 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
     return Imagem('./assets/icons/gray-star.svg', 'Estrela cinza');
   });
 
+  const estimativaDeEntrega = calcularDataComDias(shipping.days).split(', ');
+
   return Link({
     className: 'livro',
     href: `/livro.html?id=${id}`,
@@ -33,7 +35,7 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
         className: 'livro-preco',
         children: [
           Paragrafo(
-            `${formatarNumeroComDesconto(price)} ${Span('no pix').outerHTML}`,
+            `${formatarDinheiroComDesconto(price)} ${Span('no pix').outerHTML}`,
             'livro-preco-pix'
           ),
           Paragrafo(`com ${price.discount}% de desconto`, 'livro-desconto'),
@@ -44,7 +46,7 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
         'livro-frete'
       ),
       Paragrafo(
-        `Receba até ${Strong('quarta-feira', 'livro-entrega').outerHTML}, 22 de jan.`,
+        `Receba até ${Strong(estimativaDeEntrega[0], 'livro-entrega').outerHTML}, ${estimativaDeEntrega[1]}`,
         'livro-entrega'
       ),
     ],
