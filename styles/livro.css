@@ -15,14 +15,14 @@
 }
 
 .book-image {
-  height: 368px;
-  width: 245px;
+  height: 308px;
+  width: 205px;
 }
 
 .book-details {
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: 0.8rem;
 }
 
 .book-details-title {
@@ -32,7 +32,7 @@
 .book-details-rate {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .book-details-rate-amount {
@@ -42,7 +42,12 @@
 .book-details-description {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
+}
+
+.book-details-description p {
+  font-size: 12px;
+  text-align: justify;
 }
 
 .purchase-info {
@@ -84,6 +89,49 @@
   text-decoration: line-through;
 }
 
+.purchase-shipping-estimated {
+  width: max-content;
+  font-size: 15 px;
+}
+
 .purchase-shipping-radius {
   text-transform: uppercase;
+  color: var(--green-1);
+}
+
+.purchase-amount {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.purchase-amount input {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--gray-3);
+}
+
+.purchase-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.purchase-button {
+  padding: 1rem;
+  background-color: var(--purple-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.bg--purple-3 {
+  background-color: var(--purple-3);
+}
+
+.purchase-button:hover {
+  opacity: .8;
 }

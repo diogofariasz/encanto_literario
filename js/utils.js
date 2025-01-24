@@ -40,6 +40,13 @@ const Div = ({ text, className, children = [] }) =>
 const Link = ({ text, href, className, children = [] }) =>
   criarElemento('a', { text, className, children, attributes: { href } });
 
+const NumberInput = ( { className, attributes } ) => 
+  criarElemento('input', { className, attributes: { 
+    type: 'number', 
+    ...attributes
+  } 
+});
+
 const Imagem = (src, alt, className) =>
   criarElemento('img', { className, attributes: { src, alt } });
 

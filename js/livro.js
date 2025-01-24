@@ -36,10 +36,7 @@ function criarLivro() {
             `${Strong('Autor do Livro:').outerHTML} ${livro.author}`,
             'book-details-author'
           ),
-          Paragrafo(
-            `${Strong('Categoria:').outerHTML} ${livro.category}`,
-            'book-details-author'
-          ),
+          Paragrafo(`${Strong('Categoria:').outerHTML} ${livro.category}`, 'book-details-author'),
           Div({
             className: 'book-details-description',
             children: [Strong('Descrição:'), Paragrafo(livro.desc)],
@@ -55,18 +52,51 @@ function criarLivro() {
       Div({
         className: 'purchase-price',
         children: [
-          Paragrafo(`com ${Span(`${livro.price.discount}%`, 'purchase-price-discount-percent').outerHTML} off`,'purchase-price-discount'),
+          Paragrafo(
+            `com ${
+              Span(`${livro.price.discount}%`, 'purchase-price-discount-percent').outerHTML
+            } off`,
+            'purchase-price-discount'
+          ),
           Paragrafo(`${formatarNumeroComDesconto(livro.price)}`, 'purchase-price-promotion'),
-          Paragrafo(`originalmente por ${Span(formatarDinheiro(livro.price), 'purchase-price-original-amount').outerHTML}`,'purchase-price-original')
+          Paragrafo(
+            `originalmente por ${
+              Span(formatarDinheiro(livro.price), 'purchase-price-original-amount').outerHTML
+            }`,
+            'purchase-price-original'
+          ),
         ],
       }),
       Div({
         className: 'purchase-shipping',
         children: [
-          Paragrafo(`${Strong('Entrega:').outerHTML} ${livro.shipping.amount == 0 ? 'GRÁTIS' : formatarDinheiro(livro.shipping)}`),
-          Paragrafo('para todo o país', 'purchase-shipping-radius')
-        ]
-      })
+          Paragrafo(
+            `${Strong('Entrega:').outerHTML} ${
+              livro.shipping.amount == 0 ? 'GRÁTIS' : formatarDinheiro(livro.shipping)
+            }`
+          ),
+          Paragrafo(
+            `Estimativa de entrega ${Strong('quarta-feira, 22 fev').outerHTML}`,
+            'purchase-shipping-estimated'
+          ),
+          Paragrafo('entrega para todo o país!', 'purchase-shipping-radius'),
+        ],
+      }),
+      Div({
+        className: 'purchase-amount',
+        children: [
+          Strong('Quantidade:'),
+          NumberInput({ attributes: { placeholder: '1', value: '1', min: 1, max: 10 } }),
+        ],
+      }),
+
+      Div({
+        className: 'purchase-buttons',
+        children: [
+          Div({ text: 'Comprar agora', className: 'purchase-button' }),
+          Div({ text: 'Adicionar ao Carrinho', className: 'purchase-button bg--purple-3' }),
+        ],
+      }),
     ],
   });
 
