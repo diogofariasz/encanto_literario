@@ -101,8 +101,8 @@
   width: fit-content;
   color: var(--green-1);
   background-color: var(--green-2);
-  padding: .2rem;
-  border-radius: .5rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
 }
 
 .purchase-amount {
@@ -120,7 +120,7 @@
 .purchase-buttons {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .purchase-button {
@@ -139,5 +139,5 @@
 }
 
 .purchase-button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }

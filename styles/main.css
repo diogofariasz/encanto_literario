@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
 
 * {
@@ -13,29 +11,30 @@
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: black;
 }
 
 :root {
   /* Cores */
   --purple-1: #180047;
-  --purple-2: #5D17EB;
-  --purple-3: #A782F1;
-  --purple-4: #A094BA;
-  --purple-5: #CEB9F9;
+  --purple-2: #5d17eb;
+  --purple-3: #a782f1;
+  --purple-4: #a094ba;
+  --purple-5: #ceb9f9;
 
   --gray-1: #313131;
   --gray-2: #929292;
-  --gray-3: #D4D4D4;
-  --gray-4: #E2E2E2;
+  --gray-3: #d4d4d4;
+  --gray-4: #e2e2e2;
+  --gray-translucent: #96969651;
 
-  --yellow-1: #848B00;
-  --yellow-2: #FFFAB3;
+  --yellow-1: #848b00;
+  --yellow-2: #fffab3;
 
-  --green-1: #00501D;
+  --green-1: #00501d;
   --green-2: #00953775;
 
-  --red-1: #EC6D6D;
+  --red-1: #ec6d6d;
 
   /* Configurações */
   --tamanho-tela: 1080px;

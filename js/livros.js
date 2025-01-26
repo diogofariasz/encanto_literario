@@ -1,8 +1,8 @@
 const url = new URL(window.location.href);
-const filter = url.searchParams.get('filter');
+const category = url.searchParams.get('category');
 
-function criarLivro({ id, title, image_url, assessment, price, shipping }) {
-  const { value: estrelas, amount: totalAvaliacoes } = assessment;
+function criarLivro({ id, title, image_url, reviews, price, delivery }) {
+  const { stars: estrelas, amount: totalAvaliacoes } = reviews;
   const estrelasInteiras = Math.floor(estrelas);
   const meiaEstrela = possuiCasasDecimais(estrelas);
 
@@ -13,7 +13,7 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
     return Imagem('./assets/icons/gray-star.svg', 'Estrela cinza');
   });
 
-  const estimativaDeEntrega = calcularDataComDias(shipping.days).split(', ');
+  const estimativaDeEntrega = calcularDataComDias(delivery.days).split(', ');
 
   return Link({
     className: 'livro',
@@ -42,11 +42,13 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
         ],
       }),
       Paragrafo(
-        `Frete ${shipping.amount === 0.0 ? 'GRÁTIS' : formatarDinheiro(shipping)}`,
+        `Frete ${delivery.amount === 0.0 ? 'GRÁTIS' : formatarDinheiro(delivery)}`,
         'livro-frete'
       ),
       Paragrafo(
-        `Receba até ${Strong(estimativaDeEntrega[0], 'livro-entrega').outerHTML}, ${estimativaDeEntrega[1]}`,
+        `Receba até ${Strong(estimativaDeEntrega[0], 'livro-entrega').outerHTML}, ${
+          estimativaDeEntrega[1]
+        }`,
         'livro-entrega'
       ),
     ],
@@ -56,15 +58,15 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
 const elementoLivros = document.querySelector('.livros-container');
 
 // const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
-const ordenarPorMelhorAvaliado = (a, b) => b.assessment.value - a.assessment.value;
+const ordenarPorMelhorAvaliado = (a, b) => b.reviews.stars - a.reviews.stars;
 
 const livrosOrdenados = livros.slice().sort(ordenarPorMelhorAvaliado);
 
-if (filter) {
-  const compareFilter = filter.toLowerCase()
+if (category) {
+  const compareCategory = category.toLowerCase();
 
   livrosOrdenados.forEach((livro) => {
-    if (compareFilter === livro.category.toLocaleLowerCase()) 
+    if (compareCategory === livro.category.toLocaleLowerCase())
       elementoLivros.appendChild(criarLivro(livro));
   });
 } else {

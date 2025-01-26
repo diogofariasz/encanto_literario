@@ -4,8 +4,8 @@ const id = url.searchParams.get('id');
 const livro = livros.find((livro) => livro.id == id);
 const livroElemento = document.querySelector('.livro');
 
-function criarLivro() {
-  const { value: estrelas, amount: totalAvaliacoes } = livro.assessment;
+function criarLivro({ title, author, category, price, delivery, image_url, desc, reviews }) {
+  const { stars: estrelas, amount: totalAvaliacoes } = reviews;
   const estrelasInteiras = Math.floor(estrelas);
   const meiaEstrela = possuiCasasDecimais(estrelas);
 
@@ -19,11 +19,11 @@ function criarLivro() {
   const book_info = Div({
     className: 'book-info',
     children: [
-      Imagem(livro.image_url, 'capa do livro', 'book-image'),
+      Imagem(image_url, 'capa do livro', 'book-image'),
       Div({
         className: 'book-details',
         children: [
-          Paragrafo(livro.title, 'book-details-title'),
+          Paragrafo(title, 'book-details-title'),
           Div({
             className: 'book-details-rate',
             children: [
@@ -32,14 +32,11 @@ function criarLivro() {
               Paragrafo(`(${formatarNumero(totalAvaliacoes)})`, 'book-details-rate-amount'),
             ],
           }),
-          Paragrafo(
-            `${Strong('Autor do Livro:').outerHTML} ${livro.author}`,
-            'book-details-author'
-          ),
-          Paragrafo(`${Strong('Categoria:').outerHTML} ${livro.category}`, 'book-details-author'),
+          Paragrafo(`${Strong('Autor do Livro:').outerHTML} ${author}`, 'book-details-author'),
+          Paragrafo(`${Strong('Categoria:').outerHTML} ${category}`, 'book-details-author'),
           Div({
             className: 'book-details-description',
-            children: [Strong('Descrição:'), Paragrafo(livro.desc)],
+            children: [Strong('Descrição:'), Paragrafo(desc)],
           }),
         ],
       }),
@@ -53,15 +50,13 @@ function criarLivro() {
         className: 'purchase-price',
         children: [
           Paragrafo(
-            `com ${
-              Span(`${livro.price.discount}%`, 'purchase-price-discount-percent').outerHTML
-            } off`,
+            `com ${Span(`${price.discount}%`, 'purchase-price-discount-percent').outerHTML} off`,
             'purchase-price-discount'
           ),
-          Paragrafo(`${formatarDinheiroComDesconto(livro.price)}`, 'purchase-price-promotion'),
+          Paragrafo(`${formatarDinheiroComDesconto(price)}`, 'purchase-price-promotion'),
           Paragrafo(
             `originalmente por ${
-              Span(formatarDinheiro(livro.price), 'purchase-price-original-amount').outerHTML
+              Span(formatarDinheiro(price), 'purchase-price-original-amount').outerHTML
             }`,
             'purchase-price-original'
           ),
@@ -72,11 +67,11 @@ function criarLivro() {
         children: [
           Paragrafo(
             `${Strong('Entrega:').outerHTML} ${
-              livro.shipping.amount == 0 ? 'GRÁTIS' : formatarDinheiro(livro.shipping)
+              delivery.amount == 0 ? 'GRÁTIS' : formatarDinheiro(delivery)
             }`
           ),
           Paragrafo(
-            `Estimativa de entrega ${Strong(calcularDataComDias(livro.shipping.days)).outerHTML}`,
+            `Estimativa de entrega ${Strong(calcularDataComDias(delivery.days)).outerHTML}`,
             'purchase-shipping-estimated'
           ),
           Paragrafo('entrega para todo o país!', 'purchase-shipping-radius'),
@@ -108,4 +103,4 @@ function criarLivro() {
 
 //
 
-livroElemento.appendChild(criarLivro());
+livroElemento.appendChild(criarLivro(livro));

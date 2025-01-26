@@ -2,8 +2,8 @@ const livros = [
   {
     id: 1,
     title: 'Manual de assassinato para boas garotas: 1',
-    assessment: {
-      value: 5.0,
+    reviews: {
+      stars: 5.0,
       amount: 1000,
     },
     price: {
@@ -11,7 +11,7 @@ const livros = [
       discount: 31,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 10.0,
       days: 7,
       currency: 'BRL',
@@ -24,8 +24,8 @@ const livros = [
   {
     id: 2,
     title: 'Percy Jackson e o Ladrão de Raios',
-    assessment: {
-      value: 5.0,
+    reviews: {
+      stars: 5.0,
       amount: 984,
     },
     price: {
@@ -33,7 +33,7 @@ const livros = [
       discount: 5,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 10.0,
       days: 6,
       currency: 'BRL',
@@ -46,8 +46,8 @@ const livros = [
   {
     id: 3,
     title: 'A paciente silenciosa',
-    assessment: {
-      value: 4.8,
+    reviews: {
+      stars: 4.8,
       amount: 100,
     },
     price: {
@@ -55,7 +55,7 @@ const livros = [
       discount: 22,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 10.0,
       days: 9,
       currency: 'BRL',
@@ -68,8 +68,8 @@ const livros = [
   {
     id: 4,
     title: 'A sutil arte de ligar o f*da-se',
-    assessment: {
-      value: 2.5,
+    reviews: {
+      stars: 2.5,
       amount: 890,
     },
     price: {
@@ -77,7 +77,7 @@ const livros = [
       discount: 5,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 0.0,
       days: 3,
       currency: 'BRL',
@@ -90,8 +90,8 @@ const livros = [
   {
     id: 5,
     title: 'A sutil arte de atrair',
-    assessment: {
-      value: 0.5,
+    reviews: {
+      stars: 0.5,
       amount: 1534,
     },
     price: {
@@ -99,7 +99,7 @@ const livros = [
       discount: 10,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 10.0,
       days: 3,
       currency: 'BRL',
@@ -112,8 +112,8 @@ const livros = [
   {
     id: 6,
     title: 'A psicologia financeira',
-    assessment: {
-      value: 4.0,
+    reviews: {
+      stars: 4.0,
       amount: 214,
     },
     price: {
@@ -121,7 +121,7 @@ const livros = [
       discount: 36,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 10.0,
       days: 5,
       currency: 'BRL',
@@ -134,8 +134,8 @@ const livros = [
   {
     id: 7,
     title: 'Como enfrentar o ódio',
-    assessment: {
-      value: 4.8,
+    reviews: {
+      stars: 4.8,
       amount: 3452,
     },
     price: {
@@ -143,7 +143,7 @@ const livros = [
       discount: 29,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 34.0,
       days: 6,
       currency: 'BRL',
@@ -156,8 +156,8 @@ const livros = [
   {
     id: 8,
     title: 'Felipe Neto - A Vida por trás das câmeras',
-    assessment: {
-      value: 4.3,
+    reviews: {
+      stars: 4.3,
       amount: 452,
     },
     price: {
@@ -165,7 +165,7 @@ const livros = [
       discount: 15,
       currency: 'BRL',
     },
-    shipping: {
+    delivery: {
       amount: 8.16,
       days: 2,
       currency: 'BRL',
@@ -174,5 +174,13 @@ const livros = [
     author: 'Felipe Neto',
     category: 'Infantil',
     desc: 'Prepare-se para uma imersão única na vida de Felipe Neto - um verdadeiro fenômeno da internet! Com quase 20 milhões de inscritos em seu canal e recordes quebrados no YouTube, ele é uma figura icônica que vai além das câmeras. Agora, você terá acesso exclusivo aos bastidores dessa estrela do universo digital! Em Felipe Neto - A vida por trás das câmeras, você descobrirá o Felipe além da persona extrovertida que conquistou milhões de fãs. Conhecerá o Felipe filho, amigo e namorado, desvendando seus segredos, manias, medos e sonhos para o futuro. Prepare-se para se surpreender com histórias nunca antes reveladas e momentos emocionantes que moldaram sua trajetória. Além disso, o livro proporciona uma experiência interativa e divertida. Você poderá se divertir com jogos, mergulhar em curiosidades surpreendentes e decorar seu ambiente com pôsteres exclusivos do Felipe Neto. A cada página, você estará mais próximo desse influenciador que conquistou o coração de milhões de pessoas. Se você já é fã, prepare-se para se apaixonar ainda mais pelo Felipe Neto. Se ainda não o conhece tão bem, essa é a sua chance de desvendar o mistério por trás desse grande fenômeno da internet. Então, embarque nessa jornada fascinante e descubra o Felipe Neto por trás das câmeras!',
+  },
+];
+
+const author = [
+  {
+    id: 1,
+    name: '',
+    image_url: '',
   },
 ];

@@ -1,6 +1,27 @@
 function calcularDataComDias(dias) {
-  const diasSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
-  const mesesAno = ['jan', 'fev', 'mar', 'abr', 'maio', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+  const diasSemana = [
+    'domingo',
+    'segunda-feira',
+    'terça-feira',
+    'quarta-feira',
+    'quinta-feira',
+    'sexta-feira',
+    'sábado',
+  ];
+  const mesesAno = [
+    'jan',
+    'fev',
+    'mar',
+    'abr',
+    'maio',
+    'jun',
+    'jul',
+    'ago',
+    'set',
+    'out',
+    'nov',
+    'dez',
+  ];
 
   const hoje = new Date();
   hoje.setDate(hoje.getDate() + dias);
@@ -12,7 +33,6 @@ function calcularDataComDias(dias) {
   return `${diaSemana}, ${diaMes} de ${mes}`;
 }
 
-
 const formatarDinheiro = ({ amount, currency }) => {
   return amount.toLocaleString('pt-BR', {
     style: 'currency',
@@ -22,8 +42,9 @@ const formatarDinheiro = ({ amount, currency }) => {
 
 const formatarDinheiroComDesconto = ({ amount, discount, currency }) => {
   const discountPercent = discount / 100;
-  const discountValue = amount * discountPercent
-  const priceWithDiscount = amount - discountValue;4
+  const discountValue = amount * discountPercent;
+  const priceWithDiscount = amount - discountValue;
+  4;
 
   return priceWithDiscount.toLocaleString('pt-BR', {
     style: 'currency',
@@ -55,14 +76,17 @@ const Div = ({ text, className, children = [] }) =>
 const Link = ({ text, href, className, children = [] }) =>
   criarElemento('a', { text, className, children, attributes: { href } });
 
-const NumberInput = ( { className, attributes } ) => 
-  criarElemento('input', { className, attributes: { 
-    type: 'number', 
-    ...attributes
-  } 
-});
+const NumberInput = ({ className, attributes }) =>
+  criarElemento('input', {
+    className,
+    attributes: {
+      type: 'number',
+      ...attributes,
+    },
+  });
 
-const Imagem = (src, alt, className) => criarElemento('img', { className, attributes: { src, alt } });
+const Imagem = (src, alt, className) =>
+  criarElemento('img', { className, attributes: { src, alt } });
 
 const Paragrafo = (text, className) => criarElemento('p', { text, className });
 
