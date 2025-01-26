@@ -105,7 +105,7 @@ const livros = [
       currency: 'BRL',
     },
     image_url: 'https://m.media-amazon.com/images/I/51g71VzvZ6L._SL1201_.jpg',
-    author: ' Lucas Scudeler',
+    author: 'Lucas Scudeler',
     category: 'Autoajuda',
     desc: 'Em um mundo onde as interações estão cada vez mais superficiais, A sutil arte de atrair oferece um guia passo a passo para mulheres que desejam atrair um parceiro honrado ou fortalecer o magnetismo em seus relacionamentos. Com mais de 100 técnicas comprovadas, este livro revela como entender o funcionamento da mente masculina e como conquistar a atenção dos homens sem precisar apelar para a futilidade.',
   },

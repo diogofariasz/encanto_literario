@@ -1,9 +1,12 @@
+.livro {
+  padding-top: 2rem;
+}
+
 .info-container {
   max-width: var(--tamanho-tela);
   margin-inline: auto;
   display: flex;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .book-info {
@@ -95,8 +98,11 @@
 }
 
 .purchase-shipping-radius {
-  text-transform: uppercase;
+  width: fit-content;
   color: var(--green-1);
+  background-color: var(--green-2);
+  padding: .2rem;
+  border-radius: .5rem;
 }
 
 .purchase-amount {

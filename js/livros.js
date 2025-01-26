@@ -17,7 +17,7 @@ function criarLivro({ id, title, image_url, assessment, price, shipping }) {
 
   return Link({
     className: 'livro',
-    href: `/livro.html?id=${id}`,
+    href: `/livro.html?id=${id}#livro`,
     children: [
       Imagem(image_url, 'Capa do livro', 'livro-capa'),
       Paragrafo(title, 'livro-titulo'),

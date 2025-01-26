@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/livro.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
     <script defer src="js/utils.js"></script>
     <script defer src="js/data.js"></script>
     <script defer src="js/livro.js"></script>
@@ -14,11 +21,6 @@
         lucide.createIcons();
       });
     </script>
-
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/livro.css">
-    <link rel="stylesheet" href="styles/footer.css" />
   </head>
   <body>
     <header class="header">
@@ -64,8 +66,10 @@
               <a class="dropdown-menu-option" href="/?filter=mistério">Mistério</a>
               <a class="dropdown-menu-option" href="/?filter=investigação">Investigação</a>
               <a class="dropdown-menu-option" href="/?filter=autoajuda">Autoajuda</a>
-              <a class="dropdown-menu-option"  href="/?filter=infantil">Infantil</a>
-              <a class="dropdown-menu-option"  href="/?filter=educação financeira">Educação financeira</a>
+              <a class="dropdown-menu-option" href="/?filter=infantil">Infantil</a>
+              <a class="dropdown-menu-option" href="/?filter=educação financeira"
+                >Educação financeira</a
+              >
             </div>
           </div>
 
@@ -93,7 +97,7 @@
       </nav>
     </header>
 
-    <div class="livro"></div>
+    <div class="livro" id="livro"></div>
 
     <footer class="footer">
       <div class="footer-informations">
