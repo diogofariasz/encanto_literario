@@ -60,7 +60,7 @@ const elementoLivros = document.querySelector('.livros-container');
 // const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
 const ordenarPorMelhorAvaliado = (a, b) => b.reviews.stars - a.reviews.stars;
 
-const livrosOrdenados = livros.slice().sort(ordenarPorMelhorAvaliado);
+const livrosOrdenados = books.slice().sort(ordenarPorMelhorAvaliado);
 
 if (category) {
   const compareCategory = category.toLowerCase();

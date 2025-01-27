@@ -1,4 +1,4 @@
-const livros = [
+const books = [
   {
     id: 1,
     title: 'Manual de assassinato para boas garotas: 1',
@@ -177,10 +177,40 @@ const livros = [
   },
 ];
 
-const author = [
+const authors = [
   {
     id: 1,
-    name: '',
-    image_url: '',
+    name: 'Alex Michaelides',
+    image_url: 'assets/authors/Alex Michaelides.jpg',
+  },
+  {
+    id: 2,
+    name: 'Felipe Neto',
+    image_url: 'assets/authors/Felipe Neto.jpg',
+  },
+  {
+    id: 3,
+    name: 'Holly Jackson',
+    image_url: 'assets/authors/Holly Jackson.jpg',
+  },
+  {
+    id: 4,
+    name: 'Lucas Scudeler',
+    image_url: 'assets/authors/Lucas Scudeler.jpg',
+  },
+  {
+    id: 5,
+    name: 'Mark Manson',
+    image_url: 'assets/authors/Mark Manson.jpg',
+  },
+  {
+    id: 6,
+    name: 'Morgan Housel',
+    image_url: 'assets/authors/Morgan Housel.jpg',
+  },
+  {
+    id: 7,
+    name: 'Rick Riordan',
+    image_url: 'assets/authors/Rick Riordan.jpg',
   },
 ];

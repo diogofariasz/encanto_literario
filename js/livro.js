@@ -1,7 +1,7 @@
 const url = new URL(window.location.href);
 const id = url.searchParams.get('id');
 
-const livro = livros.find((livro) => livro.id == id);
+const livro = books.find((livro) => livro.id == id);
 const livroElemento = document.querySelector('.livro');
 
 function criarLivro({ title, author, category, price, delivery, image_url, desc, reviews }) {
