@@ -33,6 +33,24 @@ function calcularDataComDias(dias) {
   return `${diaSemana}, ${diaMes} de ${mes}`;
 }
 
+const animateElement = (element, animationName, duration = '500ms') => {
+  if (!element.style.animation) {
+    element.style.animation = `${animationName} ${duration} ease-in-out`;
+
+    const handleAnimationEnd = () => {
+      element.style.animation = '';
+      element.removeEventListener('animationend', handleAnimationEnd);
+    };
+
+    element.addEventListener('animationend', handleAnimationEnd);
+
+    return true;
+  }
+
+  return false;
+};
+
+
 const formatarDinheiro = ({ amount, currency }) => {
   return amount.toLocaleString('pt-BR', {
     style: 'currency',

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/livros.css" />
     <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/footer.css" />
 
@@ -16,6 +17,7 @@
     <script defer src="js/data.js"></script>
     <script defer src="js/utils.js"></script>
     <script defer src="js/livros.js"></script>
+    <script defer src="js/cart.js"></script>
 
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer>
@@ -43,8 +45,51 @@
           </div>
 
           <div class="header-buttons">
-            <div class="button" style="background-color: var(--gray-3)">
+            <div class="button cart" style="background-color: var(--gray-3)">
               <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
+            <div class="cart-container">
+              <div class="cart-items">
+                <div class="cart-item">
+                  <div class="cart-item-info">
+                    <img
+                      src="https://m.media-amazon.com/images/I/71fE-JgveUL._AC_UF1000,1000_QL80_.jpg"
+                      alt="capa"
+                    />
+
+                    <div class="cart-item-info-text">
+                      <p>Título</p>
+                      <p class="cart-item-info-text-amount">
+                        <strong>Quantidade:</strong> 666
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="rounded-button">
+                    <i data-lucide="trash-2"></i>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <div class="cart-item-info">
+                    <img
+                      src="https://m.media-amazon.com/images/I/71fE-JgveUL._AC_UF1000,1000_QL80_.jpg"
+                      alt="capa"
+                    />
+
+                    <div class="cart-item-info-text">
+                      <p>Teste 12l3123300</p>
+                      <p class="cart-item-info-text-amount">
+                        <strong>Quantidade:</strong> 666
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="rounded-button">
+                    <i data-lucide="trash-2"></i>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="button" style="background-color: var(--gray-3)">
