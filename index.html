@@ -18,6 +18,7 @@
     <script defer src="js/utils.js"></script>
     <script defer src="js/livros.js"></script>
     <script defer src="js/cart.js"></script>
+    <script defer src="js/mobile.js"></script>
 
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer>
@@ -60,9 +61,7 @@
 
                     <div class="cart-item-info-text">
                       <p>Título</p>
-                      <p class="cart-item-info-text-amount">
-                        <strong>Quantidade:</strong> 666
-                      </p>
+                      <p class="cart-item-info-text-amount"><strong>Quantidade:</strong> 666</p>
                     </div>
                   </div>
 
@@ -79,9 +78,7 @@
 
                     <div class="cart-item-info-text">
                       <p>Teste 12l3123300</p>
-                      <p class="cart-item-info-text-amount">
-                        <strong>Quantidade:</strong> 666
-                      </p>
+                      <p class="cart-item-info-text-amount"><strong>Quantidade:</strong> 666</p>
                     </div>
                   </div>
 
@@ -96,10 +93,33 @@
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </div>
           </div>
+
+          <div class="header-mid-hamburguer">
+            <i data-lucide="align-justify" style="color: var(--purple-1)"></i>
+          </div>
         </div>
       </div>
 
       <nav class="header-bottom">
+        <div class="header-mid-mobile">
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+
+          <div class="header-buttons">
+            <div class="button cart" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
+            <div class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+        </div>
+
         <div class="header-bottom-container">
           <div class="dropdown">
             <div class="navigation-button">
@@ -112,16 +132,9 @@
               <a class="dropdown-menu-option" href="/?category=fantasia#livros">Fantasia</a>
               <a class="dropdown-menu-option" href="/?category=mistério#livros">Mistério</a>
               <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
-              <!-- <a class="dropdown-menu-option">Romance</a> -->
               <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
               <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
-              <a class="dropdown-menu-option" href="/?category=educação financeira#livros"
-                >Educação financeira</a
-              >
-              <!-- <a class="dropdown-menu-option">Aventura</a>
-              <a class="dropdown-menu-option">Drama</a>
-              <a class="dropdown-menu-option">Ficção cientifica</a>
-              <a class="dropdown-menu-option">Poesia</a> -->
+              <a class="dropdown-menu-option" href="/?category=educação financeira#livros">Educação financeira</a>
             </div>
           </div>
 

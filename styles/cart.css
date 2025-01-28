@@ -8,6 +8,7 @@ body {
 }
 
 .cart-container {
+  display: none;
   background-color: var(--gray-3);
   position: absolute;
   top: 8rem;

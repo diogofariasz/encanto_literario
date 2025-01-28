@@ -74,6 +74,11 @@
   /* position: relative; */
 }
 
+.header-mid-hamburguer,
+.header-mid-mobile {
+  display: none;
+}
+
 .button {
   border-radius: 10px;
   background-color: var(--purple-2);
@@ -141,4 +146,51 @@
 
 .dropdown-menu-option:hover {
   opacity: 0.4;
+}
+
+@media screen and (max-width: 680px) {
+  .header-top {
+    font-size: 12px;
+  }
+
+  .header-mid-container {
+    padding-inline: 1rem;
+  }
+
+  .header-logo {
+    flex-direction: column;
+  }
+
+  .header-logo img {
+    height: 43px;
+    width: 78px;
+  }
+
+  .header-mid-container > .header-buttons,
+  .header-mid-container > .input-container {
+    display: none;
+  }
+
+  .header-mid-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+
+  .header-mid-hamburguer {
+    display: block;
+  }
+
+  .header-bottom {
+    position: absolute;
+    width: 100%;
+  }
+
+  .header-bottom-container {
+    width: 100%;
+    flex-direction: column;
+  }
 }
