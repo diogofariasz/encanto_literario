@@ -3,6 +3,7 @@
 .hero {
   max-width: var(--tamanho-tela);
   margin: 4rem auto;
+  padding-inline: 1rem;
 }
 
 .hero-container {
@@ -58,4 +59,12 @@
   font-size: 40px;
   width: 372px;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-slogan {
+    font-size: 25px;
+    text-wrap: wrap;
+    width: auto;
+  }
 }

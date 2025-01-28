@@ -3,10 +3,6 @@
   --text-max: 100px;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .cart-container {
   display: none;
   background-color: var(--gray-3);

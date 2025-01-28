@@ -16,7 +16,7 @@ function replaceIcon(element, iconName, color) {
 headerHamburguer.addEventListener('click', () => {
   const open = headerHamburguer.classList.toggle('active')
 
-  headerBottom.style.display = open ? 'block' : 'none'
+  headerBottom.style.height = open ? `${headerBottom.scrollHeight}px` : ''
   replaceIcon(
     headerHamburguer, open ? 'x' : 'align-justify', 'var(--purple-1)'
   );
