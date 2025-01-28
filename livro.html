@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 
     <script defer src="js/utils.js"></script>
+    <script defer src="js/mobile.js"></script>
     <script defer src="js/data.js"></script>
     <script defer src="js/livro.js"></script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
@@ -41,7 +42,32 @@
           </div>
 
           <div class="header-buttons">
+            <div class="button cart" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
             <div class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+
+          <div class="header-mid-hamburguer">
+            <i data-lucide="align-justify" style="color: var(--purple-1)"></i>
+          </div>
+        </div>
+      </div>
+
+      <nav class="header-bottom">
+        <div class="header-mid-mobile">
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+
+          <div class="header-buttons">
+            <div class="button cart" style="background-color: var(--gray-3)">
               <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
             </div>
 
@@ -50,9 +76,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <nav class="header-bottom">
         <div class="header-bottom-container">
           <div class="dropdown">
             <div class="navigation-button">
@@ -61,13 +85,13 @@
             </div>
 
             <div class="dropdown-menu">
-              <a class="dropdown-menu-option" href="/">Qualquer</a>
-              <a class="dropdown-menu-option" href="/?filter=fantasia">Fantasia</a>
-              <a class="dropdown-menu-option" href="/?filter=mistério">Mistério</a>
-              <a class="dropdown-menu-option" href="/?filter=investigação">Investigação</a>
-              <a class="dropdown-menu-option" href="/?filter=autoajuda">Autoajuda</a>
-              <a class="dropdown-menu-option" href="/?filter=infantil">Infantil</a>
-              <a class="dropdown-menu-option" href="/?filter=educação financeira"
+              <a class="dropdown-menu-option" href="/#livros">Qualquer</a>
+              <a class="dropdown-menu-option" href="/?category=fantasia#livros">Fantasia</a>
+              <a class="dropdown-menu-option" href="/?category=mistério#livros">Mistério</a>
+              <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
+              <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
+              <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
+              <a class="dropdown-menu-option" href="/?category=educação financeira#livros"
                 >Educação financeira</a
               >
             </div>
@@ -97,7 +121,9 @@
       </nav>
     </header>
 
-    <div class="livro" id="livro"></div>
+    <main>
+      <div class="livro" id="livro"></div>
+    </main>
 
     <footer class="footer">
       <div class="footer-informations">

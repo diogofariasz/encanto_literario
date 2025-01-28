@@ -1,5 +1,6 @@
 const headerHamburguer = document.querySelector('.header-mid-hamburguer');
 const headerBottom = document.querySelector('.header-bottom');
+const dropdownButtons = document.querySelectorAll('.dropdown');
 
 function replaceIcon(element, iconName, color) {
   element.innerHTML = '';
@@ -21,3 +22,13 @@ headerHamburguer.addEventListener('click', () => {
     headerHamburguer, open ? 'x' : 'align-justify', 'var(--purple-1)'
   );
 });
+
+dropdownButtons.forEach((dropdown) => {
+  const button = dropdown.querySelector('.navigation-button')
+  
+  button.addEventListener('click', () => {
+    const menu = dropdown.querySelector('.dropdown-menu')
+
+    dropdown.classList.toggle('menu-active')
+  })
+})
