@@ -204,7 +204,7 @@
   }
 
   .menu-active > .navigation-button > svg {
-    rotate: 90deg;
+    rotate: 180deg;
   }
 
   .menu-active > .dropdown-menu {
