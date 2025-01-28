@@ -27,8 +27,6 @@ dropdownButtons.forEach((dropdown) => {
   const button = dropdown.querySelector('.navigation-button')
   
   button.addEventListener('click', () => {
-    const menu = dropdown.querySelector('.dropdown-menu')
-
     dropdown.classList.toggle('menu-active')
   })
 })

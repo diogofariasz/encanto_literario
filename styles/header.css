@@ -199,8 +199,12 @@
     flex-direction: column;
   }
 
+  .navigation-button > svg {
+    transition: 500ms;
+  }
+
   .menu-active > .navigation-button > svg {
-    rotate: 270deg;
+    rotate: 90deg;
   }
 
   .menu-active > .dropdown-menu {
