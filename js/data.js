@@ -181,36 +181,36 @@ const authors = [
   {
     id: 1,
     name: 'Alex Michaelides',
-    image_url: 'assets/authors/Alex Michaelides.jpg',
+    image_url: 'https://i.pinimg.com/736x/59/d0/94/59d0948f350fc3941fbb0e85fe324a36.jpg',
   },
   {
     id: 2,
     name: 'Felipe Neto',
-    image_url: 'assets/authors/Felipe Neto.jpg',
+    image_url: 'https://i.pinimg.com/736x/ca/44/d6/ca44d6a81685c4ffa5e90131719532e0.jpg',
   },
   {
     id: 3,
     name: 'Holly Jackson',
-    image_url: 'assets/authors/Holly Jackson.jpg',
+    image_url: 'https://i.pinimg.com/736x/c5/2c/fc/c52cfc722809f976435569c27061d0e9.jpg',
   },
   {
     id: 4,
     name: 'Lucas Scudeler',
-    image_url: 'assets/authors/Lucas Scudeler.jpg',
+    image_url: 'https://i.pinimg.com/736x/46/0d/3e/460d3ee246d2c31c38238464f473a846.jpg',
   },
   {
     id: 5,
     name: 'Mark Manson',
-    image_url: 'assets/authors/Mark Manson.jpg',
+    image_url: 'https://i.pinimg.com/736x/b0/41/08/b041080755b6032ae143d599f7f33e15.jpg',
   },
   {
     id: 6,
     name: 'Morgan Housel',
-    image_url: 'assets/authors/Morgan Housel.jpg',
+    image_url: 'https://i.pinimg.com/736x/2c/3c/14/2c3c147ba7e2afda65c81d1a4e7856e1.jpg',
   },
   {
     id: 7,
     name: 'Rick Riordan',
-    image_url: 'assets/authors/Rick Riordan.jpg',
+    image_url: 'https://i.pinimg.com/736x/73/3b/86/733b8638810a7dfcd4160db157128875.jpg',
   },
 ];

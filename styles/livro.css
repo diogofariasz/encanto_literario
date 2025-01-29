@@ -71,7 +71,7 @@
 .purchase-price-discount {
   width: max-content;
   font-size: 16px;
-  color: var(--red-1);
+  color: var(--red-2);
   text-transform: uppercase;
 }
 
