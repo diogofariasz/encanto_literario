@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        body{
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+        .area-login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+            display: flex;
+            flex-direction: column;
+            background-color: #E7E7E7;
+            border-radius: 15px;
+            width: 355px;
+            height: 520px;
+            padding: 35px;
+            
+        }
+        .login form{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+           
+        }
+        .btn{
+            margin-top: 20px;
+           background-color: #5D17EB;
+           height: 120px;
+           color: white;
+           border: none;
+           border-radius: 5px;
+           padding: 15px;
+       }
+
+       input{
+        height: 100px;
+        padding: 10px;
+        background-color: #D9D9D9;
+        color: #313131;
+        border: none;
+       }
+        .login img{
+            width: 95px;
+            height: auto;
+        }
+        
+        a{
+            color: #0772EB;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        .loginn{
+           display: flex;
+            width: 30%;
+            border-radius: 50%;
+            gap: 20px;
+            align-items: center;
+        }
+        .loggin img{
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="area-login">
+    <div class="login">
+        <H1>Cadastro</H1>
+            <input type="text" name="nome" placeholder="Usuário" id = "email" class = "form-control" autofocus>
+            <input type="text" name="nome" placeholder="Email" id = "email" class = "form-control" autofocus>
+            <input type="password" name="senha" placeholder="Senha" id = "senha" class = "form-control" autofocus>
+            <button class="btn" type="button">Entre</button>
+        <br/>
+        <a href="#">Esqueci minha senha</a>
+        <center>
+        <p>ou</p>
+        </center>
+
+       <div class="loginn">
+        <a href="#"><img src="assets/icons/Google_Chrome_icon_(2011).png"  alt=""></a>
+        <a href="#"><img src="assets/icons/Coast_twitter.png" alt=""></a>
+        <a href="#"><img src="assets/icons/Facebook_f_logo_(2019).svg.png" alt="Facebook"></a>
+       </div>
+       
+        <p>Ainda não tem cadastro?<a href="cadastro.html">Cadastrar</a></p>
+        <br/>
+    </div>
+</section>
+</html>
