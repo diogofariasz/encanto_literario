@@ -177,10 +177,6 @@
     padding-block: 1rem;
   }
 
-  .header-mid-hamburguer {
-    display: block;
-  }
-
   .header-bottom {
     height: 0;
     position: absolute;
@@ -213,5 +209,51 @@
     gap: .5rem;
     padding: .5rem .2rem;
     background-color: var(--purple-5);
+  }
+
+  .header-mid-hamburguer {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    display: block;
+  }
+  
+  .header-mid-hamburguer span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 16%;
+    transform-origin: center;
+    background-color: var(--purple-1);
+    border-radius: 4px;
+    transition: 500ms;
+  }
+  
+  .header-mid-hamburguer span:nth-child(1) {
+    top: 0;
+  }
+  
+  .header-mid-hamburguer span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .header-mid-hamburguer span:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  
+  .hamburguer-active span:nth-child(1) {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+  }
+  
+  .hamburguer-active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburguer-active span:nth-child(3) {
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
   }
 }

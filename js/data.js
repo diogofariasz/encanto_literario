@@ -135,7 +135,7 @@ const books = [
     id: 7,
     title: 'Como enfrentar o ódio',
     reviews: {
-      stars: 4.8,
+      stars: 1.8,
       amount: 3452,
     },
     price: {

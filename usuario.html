@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
 
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/livros.css" />
@@ -29,188 +29,153 @@
         lucide.createIcons();
       });
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="header-top">50% de Desconto em Todos os Livros (Apenas hoje)</div>
-  
-        <div class="header-mid">
-          <div class="header-mid-container">
-            <div class="input-container">
-              <input type="text" placeholder="O que você deseja?" id="search" />
-              <div class="button">
-                <i data-lucide="search" style="color: var(--purple-3)"></i>
-              </div>
-            </div>
-  
-            <a href="/" class="header-logo">
-              <img src="assets/logo.svg" alt="logo" />
-              <p>Encanto Literário</p>
-            </a>
-  
-            <div class="header-buttons">
-              <div class="button cart" style="background-color: var(--gray-3)">
-                <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
-              </div>
-  
-              <div class="cart-container">
-                <div class="cart-items">
-                  <div class="cart-item">
-                    <div class="cart-item-info">
-                      <img
-                        src="https://m.media-amazon.com/images/I/71fE-JgveUL._AC_UF1000,1000_QL80_.jpg"
-                        alt="capa"
-                      />
-  
-                      <div class="cart-item-info-text">
-                        <p>Título</p>
-                        <p class="cart-item-info-text-amount"><strong>Quantidade:</strong> 666</p>
-                      </div>
-                    </div>
-  
-                    <div class="rounded-button">
-                      <i data-lucide="trash-2"></i>
-                    </div>
-                  </div>
-                  <div class="cart-item">
-                    <div class="cart-item-info">
-                      <img
-                        src="https://m.media-amazon.com/images/I/71fE-JgveUL._AC_UF1000,1000_QL80_.jpg"
-                        alt="capa"
-                      />
-  
-                      <div class="cart-item-info-text">
-                        <p>Teste 12l3123300</p>
-                        <p class="cart-item-info-text-amount"><strong>Quantidade:</strong> 666</p>
-                      </div>
-                    </div>
-  
-                    <div class="rounded-button">
-                      <i data-lucide="trash-2"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <a href="cadastro.html" class="button" style="background-color: var(--gray-3)">
-                <i data-lucide="user-round" style="color: var(--purple-3)"></i>
-              </a>
-            </div>
-  
-            <div class="header-mid-hamburguer">
-              <i data-lucide="align-justify" style="color: var(--purple-1)"></i>
-            </div>
-          </div>
-        </div>
-  
-        <nav class="header-bottom">
-          <div class="header-mid-mobile">
-            <div class="input-container">
-              <input type="text" placeholder="O que você deseja?" id="search" />
-              <div class="button">
-                <i data-lucide="search" style="color: var(--purple-3)"></i>
-              </div>
-            </div>
-  
-            <div class="header-buttons">
-              <div class="button cart" style="background-color: var(--gray-3)">
-                <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
-              </div>
-  
-              <div class="button" style="background-color: var(--gray-3)">
-                <i data-lucide="user-round" style="color: var(--purple-3)"></i>
-              </div>
-            </div>
-          </div>
-  
-          <div class="header-bottom-container">
-            <div class="dropdown">
-              <div class="navigation-button">
-                <p>Categorias de Livro</p>
-                <i data-lucide="chevron-down"></i>
-              </div>
-  
-              <div class="dropdown-menu">
-                <a class="dropdown-menu-option" href="/#livros">Qualquer</a>
-                <a class="dropdown-menu-option" href="/?category=fantasia#livros">Fantasia</a>
-                <a class="dropdown-menu-option" href="/?category=mistério#livros">Mistério</a>
-                <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
-                <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
-                <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
-                <a class="dropdown-menu-option" href="/?category=educação financeira#livros">Educação financeira</a>
-              </div>
-            </div>
-  
-            <div class="dropdown">
-              <div class="navigation-button">
-                <p>Categorias de Mangá</p>
-                <i data-lucide="chevron-down"></i>
-              </div>
-  
-              <div class="dropdown-menu">
-                <div class="dropdown-menu-option">Fantasia</div>
-              </div>
-            </div>
-  
-            <div class="navigation-button" style="background-color: var(--purple-4)">
-              <p>Mais Vendidos</p>
-              <i data-lucide="trending-up"></i>
-            </div>
-  
-            <div class="navigation-button" style="background-color: var(--purple-4)">
-              <p>Ofertas do Dia</p>
-              <i data-lucide="badge-percent"></i>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <div class="header-top">50% de Desconto em Todos os Livros (Apenas hoje)</div>
 
-      <footer class="footer">
-        <div class="footer-informations">
-          <div class="footer-informations-container">
-            <div class="footer-column"></div>
-  
-            <div class="footer-column">
-              <p>Sobre nós:</p>
-              <div class="footer-column-info">
-                <a target="_blank" href="#"><p>Quem nós somos?</p></a>
-                <a target="_blank" href="#"><p>Outros trabalhos</p></a>
-              </div>
+      <div class="header-mid">
+        <div class="header-mid-container">
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
             </div>
-  
-            <div class="footer-column">
-              <p>Realizado por:</p>
-              <div class="footer-column-info">
-                <a target="_blank" href="https://github.com/diogofariasz"><p>Diogo Emanuel</p></a>
-                <a target="_blank" href="https://github.com/adrian5g"><p>Igor Ádrian</p></a>
-                <a target="_blank" href="https://github.com/LuizFelipe505"><p>Luiz Felipe</p></a>
-              </div>
+          </div>
+
+          <a href="/" class="header-logo">
+            <img src="assets/logo.svg" alt="logo" />
+            <p>Encanto Literário</p>
+          </a>
+
+          <div class="header-buttons">
+            <div class="button cart" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
             </div>
-  
-            <div class="footer-column">
-              <p>Precisa de suporte?</p>
-              <div class="footer-column-info">
-                <a href="#"><p>Chat Online</p></a>
-                <a href="#"><p>Email</p></a>
-                <a href="#"><p>Assistência Online</p></a>
-                <a href="#"><p>Fale conosco</p></a>
-              </div>
+
+            <a href="cadastro.html" class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+            </a>
+          </div>
+
+          <div class="header-mid-hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="header-bottom">
+        <div class="header-mid-mobile">
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
             </div>
-  
-            <div class="footer-column">
-              <p>Siga-nos:</p>
-              <div class="footer-social">
-                <a href="#"><i data-lucide="twitter"></i></a>
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="facebook"></i></a>
-              </div>
+          </div>
+
+          <div class="header-buttons">
+            <div class="button cart" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
+            <div class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </div>
           </div>
         </div>
-  
-        <div class="footer-rights">
-          <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
+
+        <div class="header-bottom-container">
+          <div class="dropdown">
+            <div class="navigation-button">
+              <p>Categorias de Livro</p>
+              <i data-lucide="chevron-down"></i>
+            </div>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-menu-option" href="/#livros">Qualquer</a>
+              <a class="dropdown-menu-option" href="/?category=fantasia#livros">Fantasia</a>
+              <a class="dropdown-menu-option" href="/?category=mistério#livros">Mistério</a>
+              <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
+              <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
+              <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
+              <a class="dropdown-menu-option" href="/?category=educação financeira#livros"
+                >Educação financeira</a
+              >
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="navigation-button">
+              <p>Categorias de Mangá</p>
+              <i data-lucide="chevron-down"></i>
+            </div>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-option">Fantasia</div>
+            </div>
+          </div>
+
+          <div class="navigation-button" style="background-color: var(--purple-4)">
+            <p>Mais Vendidos</p>
+            <i data-lucide="trending-up"></i>
+          </div>
+
+          <div class="navigation-button" style="background-color: var(--purple-4)">
+            <p>Ofertas do Dia</p>
+            <i data-lucide="badge-percent"></i>
+          </div>
         </div>
-      </footer>
-</body>
+      </nav>
+    </header>
+
+    <footer class="footer">
+      <div class="footer-informations">
+        <div class="footer-informations-container">
+          <div class="footer-column"></div>
+
+          <div class="footer-column">
+            <p>Sobre nós:</p>
+            <div class="footer-column-info">
+              <a target="_blank" href="#"><p>Quem nós somos?</p></a>
+              <a target="_blank" href="#"><p>Outros trabalhos</p></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <p>Realizado por:</p>
+            <div class="footer-column-info">
+              <a target="_blank" href="https://github.com/diogofariasz"><p>Diogo Emanuel</p></a>
+              <a target="_blank" href="https://github.com/adrian5g"><p>Igor Ádrian</p></a>
+              <a target="_blank" href="https://github.com/LuizFelipe505"><p>Luiz Felipe</p></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <p>Precisa de suporte?</p>
+            <div class="footer-column-info">
+              <a href="#"><p>Chat Online</p></a>
+              <a href="#"><p>Email</p></a>
+              <a href="#"><p>Assistência Online</p></a>
+              <a href="#"><p>Fale conosco</p></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <p>Siga-nos:</p>
+            <div class="footer-social">
+              <a href="#"><i data-lucide="twitter"></i></a>
+              <a href="#"><i data-lucide="instagram"></i></a>
+              <a href="#"><i data-lucide="facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-rights">
+        <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
+      </div>
+    </footer>
+  </body>
 </html>
