@@ -2,13 +2,14 @@
 
 }
 .usuario2 {
-margin-top: 5%;
-margin-left: 3%;
+margin-top: 3%;
+margin-left: 4%;
+display: flex;
 }
 .usuario3 {
     font-size: 18px;
-    margin-top: 2%;
-    margin-left: 5.5%;
+    margin-top: -3%;
+    margin-left: 6%;
     text-align: start;
    
 }
@@ -25,11 +26,31 @@ margin-left: 3%;
 }
 
 .box {
-    display: flex;
-    width: 400px; 
-    height: 200px; 
+    margin-left: 10%;
+    width: 700px; 
+    height: 400px; 
     border: 1px solid #ccc; 
     border-radius: 10px; 
     background-color: white; 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.box p {
+    font-weight: bold;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+.btn{
+    background-color: #CEB9F9;
+    color: #180047;
+    height: 30px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    margin-left: 3%;
+    margin-top: 5%;
+  
+    border-radius: 8px;
+    flex-direction: column;
 }
