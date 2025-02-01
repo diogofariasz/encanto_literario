@@ -1,3 +1,5 @@
+// Ainda não terminado!!!
+
 const cartElement = document.querySelector('.cart');
 const cartContainer = document.querySelector('.cart-container');
 

@@ -1,20 +1,27 @@
-const url = new URL(window.location.href);
-const category = url.searchParams.get('category');
+const url = new URL(window.location.href); // Pega os dados da url
+const category = url.searchParams.get('category'); // Pega a categoria que está no url
 
-function criarLivro({ id, title, image_url, reviews, price, delivery }) {
-  const { stars: estrelas, amount: totalAvaliacoes } = reviews;
-  const estrelasInteiras = Math.floor(estrelas);
-  const meiaEstrela = possuiCasasDecimais(estrelas);
+// Elemento onde vai estar os livros
+const booksContainerElement = document.querySelector('.livros-container');
 
-  const avaliacoesEstrelas = Array.from({ length: 5 }, (_, i) => {
-    if (i < estrelasInteiras) return Imagem('./assets/icons/star.svg', 'Estrela cheia');
-    if (i === estrelasInteiras && meiaEstrela)
+function createCardElement({ id, title, image_url, reviews, price, delivery }) {
+  const { stars: reviewsStars, amount: reviewsAmount } = reviews;
+
+  const starsInteger = Math.floor(reviewsStars); // Número de estrela em um inteiro
+  const hasHalfStar = possuiCasasDecimais(reviewsStars); // Se há uma meia estrela
+
+  // Constrói os elementos de imagem das estrelas
+  const starRatingElements = Array.from({ length: 5 }, (_, i) => {
+    if (i < starsInteger) return Imagem('./assets/icons/star.svg', 'Estrela cheia');
+    if (i === starsInteger && hasHalfStar)
       return Imagem('./assets/icons/half-star.svg', 'Meia estrela');
     return Imagem('./assets/icons/gray-star.svg', 'Estrela cinza');
   });
 
-  const estimativaDeEntrega = calcularDataComDias(delivery.days).split(', ');
+  // Estimativa de entrega
+  const deliveryEstimate = calcularDataComDias(delivery.days).split(', ');
 
+  // Cria o componente do card que representa o livro e retorna
   return Link({
     className: 'livro',
     href: `/livro.html?id=${id}#livro`,
@@ -26,9 +33,9 @@ function criarLivro({ id, title, image_url, reviews, price, delivery }) {
         children: [
           Div({
             className: 'avaliacao-estrelas',
-            children: avaliacoesEstrelas,
+            children: starRatingElements,
           }),
-          Span(`(${formatarNumero(totalAvaliacoes)})`, 'avaliacao-quantidade'),
+          Span(`(${formatarNumero(reviewsAmount)})`, 'avaliacao-quantidade'),
         ],
       }),
       Div({
@@ -46,8 +53,8 @@ function criarLivro({ id, title, image_url, reviews, price, delivery }) {
         'livro-frete'
       ),
       Paragrafo(
-        `Receba até ${Strong(estimativaDeEntrega[0], 'livro-entrega').outerHTML}, ${
-          estimativaDeEntrega[1]
+        `Receba até ${Strong(deliveryEstimate[0], 'livro-entrega').outerHTML}, ${
+          deliveryEstimate[1]
         }`,
         'livro-entrega'
       ),
@@ -55,20 +62,22 @@ function criarLivro({ id, title, image_url, reviews, price, delivery }) {
   });
 }
 
-const elementoLivros = document.querySelector('.livros-container');
+// Classifica os livros do menos avaliado ao melhor avaliado.
+const sortByWorstRated = (a, b) => a.assessment.value - b.assessment.value;
+// Classifica os livros do mais bem avaliado ao menos avaliado.
+const sortByBestRated = (a, b) => b.reviews.stars - a.reviews.stars;
 
-// const ordenarPorPiorAvaliado = (a, b) =>  a.assessment.value - b.assessment.value
-const ordenarPorMelhorAvaliado = (a, b) => b.reviews.stars - a.reviews.stars;
+// Aplica a ordem na lista de livros
+const booksInOrder = booksData.slice().sort(sortByBestRated);
 
-const livrosOrdenados = books.slice().sort(ordenarPorMelhorAvaliado);
-
+// Filtra os livros
 if (category) {
   const compareCategory = category.toLowerCase();
 
-  livrosOrdenados.forEach((livro) => {
+  booksInOrder.forEach((livro) => {
     if (compareCategory === livro.category.toLocaleLowerCase())
-      elementoLivros.appendChild(criarLivro(livro));
+      booksContainerElement.appendChild(createCardElement(livro));
   });
 } else {
-  livrosOrdenados.forEach((livro) => elementoLivros.appendChild(criarLivro(livro)));
+  booksInOrder.forEach((livro) => booksContainerElement.appendChild(createCardElement(livro)));
 }

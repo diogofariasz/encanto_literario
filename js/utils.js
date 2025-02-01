@@ -1,3 +1,5 @@
+// Calcula a data que vai ser daqui a uma certa quantidade de dias
+// e retorna uma String formatada com essa informação.
 function calcularDataComDias(dias) {
   const diasSemana = [
     'domingo',
@@ -33,6 +35,7 @@ function calcularDataComDias(dias) {
   return `${diaSemana}, ${diaMes} de ${mes}`;
 }
 
+// Formata um número em formato de dinheiro
 const formatarDinheiro = ({ amount, currency }) => {
   return amount.toLocaleString('pt-BR', {
     style: 'currency',
@@ -40,6 +43,7 @@ const formatarDinheiro = ({ amount, currency }) => {
   });
 };
 
+// Formata um número em formato de dinheiro com desconto aplicado
 const formatarDinheiroComDesconto = ({ amount, discount, currency }) => {
   const discountPercent = discount / 100;
   const discountValue = amount * discountPercent;
@@ -52,11 +56,15 @@ const formatarDinheiroComDesconto = ({ amount, discount, currency }) => {
   });
 };
 
+// Formata um número colocando os pontos e vírgulas
 const formatarNumero = (number) => {
   return number.toLocaleString('pt-BR');
 };
 
+// Verifica se um número decimal possui casa decimal diferente de zero
 const possuiCasasDecimais = (numero) => numero % 1 !== 0;
+
+// Utilitários para criar elementos HTML pelo JavaScript 
 
 const criarElemento = (tag, { text = '', className = '', children = [], attributes = {} } = {}) => {
   const elemento = document.createElement(tag);

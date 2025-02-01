@@ -1,4 +1,6 @@
-const books = [
+// No futuro, será obtido por meio de um requisito ao backend.
+
+const booksData = [
   {
     id: 1,
     title: 'Manual de assassinato para boas garotas: 1',
@@ -177,7 +179,7 @@ const books = [
   },
 ];
 
-const authors = [
+const authorsData = [
   {
     id: 1,
     name: 'Alex Michaelides',

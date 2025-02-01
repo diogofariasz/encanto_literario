@@ -1,21 +1,26 @@
-const url = new URL(window.location.href);
-const id = url.searchParams.get('id');
+const url = new URL(window.location.href); // Pega os dados da url
+const id = url.searchParams.get('id'); // Pega o id do livro que está na url
 
-const livro = books.find((livro) => livro.id == id);
-const livroElemento = document.querySelector('.livro');
+const bookData = booksData.find((livro) => livro.id == id); // Dados do livro
 
-function criarLivro({ title, author, category, price, delivery, image_url, desc, reviews }) {
-  const { stars: estrelas, amount: totalAvaliacoes } = reviews;
-  const estrelasInteiras = Math.floor(estrelas);
-  const meiaEstrela = possuiCasasDecimais(estrelas);
+// Elemento onde vai estar as informações
+const bookElement = document.querySelector('.livro');
 
-  const avaliacoesEstrelas = Array.from({ length: 5 }, (_, i) => {
-    if (i < estrelasInteiras) return Imagem('./assets/icons/star.svg', 'Estrela cheia');
-    if (i === estrelasInteiras && meiaEstrela)
+function createInfoElement({ title, author, category, price, delivery, image_url, desc, reviews }) {
+  const { stars: reviewsStars, amount: reviewsAmount } = reviews;
+
+  const starsInteger = Math.floor(reviewsStars); // Número de estrela em um inteiro
+  const hasHalfStar = possuiCasasDecimais(reviewsStars); // Se há uma meia estrela
+
+  // Constrói os elementos de imagem das estrelas
+  const starRatingElements = Array.from({ length: 5 }, (_, i) => {
+    if (i < starsInteger) return Imagem('./assets/icons/star.svg', 'Estrela cheia');
+    if (i === starsInteger && hasHalfStar)
       return Imagem('./assets/icons/half-star.svg', 'Meia estrela');
     return Imagem('./assets/icons/gray-star.svg', 'Estrela cinza');
   });
 
+  // Constrói os componentes que mostram as informações do livro
   const book_info = Div({
     className: 'book-info',
     children: [
@@ -27,9 +32,9 @@ function criarLivro({ title, author, category, price, delivery, image_url, desc,
           Div({
             className: 'book-details-rate',
             children: [
-              Paragrafo(estrelas),
-              Div({ className: 'book-details-rate-stars', children: avaliacoesEstrelas }),
-              Paragrafo(`(${formatarNumero(totalAvaliacoes)})`, 'book-details-rate-amount'),
+              Paragrafo(reviewsStars),
+              Div({ className: 'book-details-rate-stars', children: starRatingElements }),
+              Paragrafo(`(${formatarNumero(reviewsAmount)})`, 'book-details-rate-amount'),
             ],
           }),
           Paragrafo(`${Strong('Autor do Livro:').outerHTML} ${author}`, 'book-details-author'),
@@ -43,6 +48,7 @@ function criarLivro({ title, author, category, price, delivery, image_url, desc,
     ],
   });
 
+  // Constrói os componentes que mostram as informações de compra
   const purchase_info = Div({
     className: 'purchase-info',
     children: [
@@ -95,12 +101,12 @@ function criarLivro({ title, author, category, price, delivery, image_url, desc,
     ],
   });
 
+  // Constrói um novo componente que encapsula os outros componentes e retorna eles
   return Div({
     className: 'info-container',
     children: [book_info, purchase_info],
   });
 }
 
-//
-
-livroElemento.appendChild(criarLivro(livro));
+// Adiciona o elemento html do livro na página
+bookElement.appendChild(createInfoElement(bookData));
