@@ -28,11 +28,16 @@
     </script>
   </head>
   <body>
+    <!-- Cabeçalho -->
     <header class="header">
+      <!-- Parte superior do cabeçalho -->
       <div class="header-top">50% de Desconto em Todos os Livros (Apenas hoje)</div>
 
+      <!-- Parte do meio do cabeçalho -->
       <div class="header-mid">
         <div class="header-mid-container">
+
+          <!-- Caixa de pesquisa -->
           <div class="input-container">
             <input type="text" placeholder="O que você deseja?" id="search" />
             <div class="button">
@@ -40,60 +45,26 @@
             </div>
           </div>
 
+          <!-- Campo do logotipo -->
           <a href="/" class="header-logo">
             <img src="assets/logo.svg" alt="logo" />
             <p>Encanto Literário</p>
           </a>
 
+          <!-- Botões de ação do cabeçalho -->
           <div class="header-buttons">
+            <!-- Botão do carrinho -->
             <div class="button cart" style="background-color: var(--gray-3)">
               <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
             </div>
 
-            <div class="cart-container">
-              <div class="cart-items">
-                <div class="cart-item">
-                  <div class="cart-item-info">
-                    <img
-                      src="https://m.media-amazon.com/images/I/71fE-JgveUL._AC_UF1000,1000_QL80_.jpg"
-                      alt="capa"
-                    />
-
-                    <div class="cart-item-info-text">
-                      <p>Título</p>
-                      <p class="cart-item-info-text-amount"><strong>Quantidade:</strong> 666</p>
-                    </div>
-                  </div>
-
-                  <div class="rounded-button">
-                    <i data-lucide="trash-2"></i>
-                  </div>
-                </div>
-                <div class="cart-item">
-                  <div class="cart-item-info">
-                    <img
-                      src="https://m.media-amazon.com/images/I/71fE-JgveUL._AC_UF1000,1000_QL80_.jpg"
-                      alt="capa"
-                    />
-
-                    <div class="cart-item-info-text">
-                      <p>Teste 12l3123300</p>
-                      <p class="cart-item-info-text-amount"><strong>Quantidade:</strong> 666</p>
-                    </div>
-                  </div>
-
-                  <div class="rounded-button">
-                    <i data-lucide="trash-2"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <!-- Botão da área do usuário -->
             <a href="cadastro.html" class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </a>
           </div>
 
+          <!-- Botão do menu hamburguer mobile -->
           <div class="header-mid-hamburguer">
             <span></span>
             <span></span>
@@ -102,8 +73,12 @@
         </div>
       </div>
 
+      <!-- Parte inferior do cabeçalho -->
       <nav class="header-bottom">
+
+        <!-- Parte mobile -->
         <div class="header-mid-mobile">
+          <!-- Caixa de pesquisa mobile -->
           <div class="input-container">
             <input type="text" placeholder="O que você deseja?" id="search" />
             <div class="button">
@@ -111,24 +86,31 @@
             </div>
           </div>
 
+          <!-- Botões de ação mobile -->
           <div class="header-buttons">
+            <!-- Botão do carrinho mobile -->
             <div class="button cart" style="background-color: var(--gray-3)">
               <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
             </div>
 
+            <!-- Botão do usuário mobile -->
             <div class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </div>
           </div>
         </div>
 
+        <!-- container da parte inferior do cabeçalho -->
         <div class="header-bottom-container">
+          <!-- Menu suspenso de categorias de livro -->
           <div class="dropdown">
+            <!-- Parte visivel (botão do menu visivel) -->
             <div class="navigation-button">
               <p>Categorias de Livro</p>
               <i data-lucide="chevron-down"></i>
             </div>
 
+            <!-- Parte do botão que aparece quando passa o mouse -->
             <div class="dropdown-menu">
               <a class="dropdown-menu-option" href="/#livros">Qualquer</a>
               <a class="dropdown-menu-option" href="/?category=fantasia#livros">Fantasia</a>
@@ -140,22 +122,27 @@
             </div>
           </div>
 
+          <!-- Menu suspenso de categorias de manga -->
           <div class="dropdown">
+            <!-- Parte visivel (botão do menu visivel) -->
             <div class="navigation-button">
               <p>Categorias de Mangá</p>
               <i data-lucide="chevron-down"></i>
             </div>
 
+            <!-- Parte do botão que aparece quando passa o mouse -->
             <div class="dropdown-menu">
               <div class="dropdown-menu-option">Fantasia</div>
             </div>
           </div>
 
+          <!-- Botão de navegação de Livros mais vendios -->
           <div class="navigation-button" style="background-color: var(--purple-4)">
             <p>Mais Vendidos</p>
             <i data-lucide="trending-up"></i>
           </div>
 
+          <!-- Botão de navegação de Ofertas do dia -->
           <div class="navigation-button" style="background-color: var(--purple-4)">
             <p>Ofertas do Dia</p>
             <i data-lucide="badge-percent"></i>
@@ -164,29 +151,39 @@
       </nav>
     </header>
 
+    <!-- Conteúdo da página -->
     <main>
+      <!-- Banner do site -->
       <section class="hero">
+        <!-- Container do banner -->
         <div class="hero-container">
+          <!-- Logo do banner -->
           <div class="hero-logo">
             <img src="assets/logo.svg" alt="logo" />
             <p>Encanto</p>
             <span>Literário</span>
           </div>
   
+          <!-- Slogan do banner -->
           <p class="hero-slogan">Livros novos a preços especiais</p>
         </div>
       </section>
   
+      <!-- Área dos livros -->
       <section class="livros" id="livros">
+        <!-- Container dos livros -->
         <div class="livros-container"></div>
       </section>
     </main>
 
+    <!-- Rodapé -->
     <footer class="footer">
+      <!-- Informações do principais do rodapé -->
       <div class="footer-informations">
         <div class="footer-informations-container">
           <div class="footer-column"></div>
 
+          <!-- Sobre nós -->
           <div class="footer-column">
             <p>Sobre nós:</p>
             <div class="footer-column-info">
@@ -195,6 +192,7 @@
             </div>
           </div>
 
+          <!-- Criadores do site -->
           <div class="footer-column">
             <p>Realizado por:</p>
             <div class="footer-column-info">
@@ -204,6 +202,7 @@
             </div>
           </div>
 
+          <!-- Suporte -->
           <div class="footer-column">
             <p>Precisa de suporte?</p>
             <div class="footer-column-info">
@@ -214,6 +213,7 @@
             </div>
           </div>
 
+          <!-- Redes sociais -->
           <div class="footer-column">
             <p>Siga-nos:</p>
             <div class="footer-social">
@@ -225,8 +225,9 @@
         </div>
       </div>
 
+      <!-- Direitos do site -->
       <div class="footer-rights">
-        <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
+        <p class="rodape-direitos">Copyright © 2025 - Todos os Direitos Reservados.</p>
       </div>
     </footer>
   </body>

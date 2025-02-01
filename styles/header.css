@@ -206,8 +206,8 @@
   .menu-active > .dropdown-menu {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
-    padding: .5rem .2rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0.2rem;
     background-color: var(--purple-5);
   }
 
@@ -217,7 +217,7 @@
     position: relative;
     display: block;
   }
-  
+
   .header-mid-hamburguer span {
     position: absolute;
     left: 0;
@@ -228,30 +228,30 @@
     border-radius: 4px;
     transition: 500ms;
   }
-  
+
   .header-mid-hamburguer span:nth-child(1) {
     top: 0;
   }
-  
+
   .header-mid-hamburguer span:nth-child(2) {
     top: 50%;
     transform: translateY(-50%);
   }
-  
+
   .header-mid-hamburguer span:nth-child(3) {
     top: 100%;
     transform: translateY(-100%);
   }
-  
+
   .hamburguer-active span:nth-child(1) {
     top: 50%;
     transform: translate(0, -50%) rotate(45deg);
   }
-  
+
   .hamburguer-active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburguer-active span:nth-child(3) {
     top: 50%;
     transform: translate(0, -50%) rotate(-45deg);

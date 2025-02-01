@@ -1,55 +1,56 @@
-.usuario {
+/* .usuario {
+} */
 
-}
 .usuario2 {
-margin-top: 3%;
-margin-left: 4%;
-display: flex;
+  margin-top: 3%;
+  margin-left: 4%;
+  display: flex;
 }
+
 .usuario3 {
-    font-size: 18px;
-    margin-top: -3%;
-    margin-left: 6%;
-    text-align: start;
-   
+  font-size: 18px;
+  margin-top: -3%;
+  margin-left: 6%;
+  text-align: start;
 }
+
 .usuario3 a {
-    text-decoration: none; 
-    color: #000000; 
-  
+  text-decoration: none;
+  color: #000000;
 }
+
 .usuario3 a:hover {
-    background-color: #4d4d4d; 
-    color: #535353; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #4d4d4d;
+  color: #535353;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .box {
-    margin-left: 10%;
-    width: 700px; 
-    height: 400px; 
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
-    background-color: white; 
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+  margin-left: 10%;
+  width: 700px;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .box p {
-    font-weight: bold;
-    margin-left: 3%;
-    margin-top: 5%;
+  font-weight: bold;
+  margin-left: 3%;
+  margin-top: 5%;
 }
 
-.btn{
-    background-color: #CEB9F9;
-    color: #180047;
-    height: 60px;
-    padding: 10px;
-    text-align: center;
-    border: none;
-    margin-left: 3%;
-    margin-top: 5%;
-    border-radius: 8px;
-    flex-direction: column;
+.btn {
+  background-color: #ceb9f9;
+  color: #180047;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  margin-left: 3%;
+  margin-top: 5%;
+  border-radius: 8px;
+  flex-direction: column;
 }
