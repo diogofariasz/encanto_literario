@@ -121,6 +121,10 @@
   color: var(--purple-1);
 }
 
+.navigation-button > svg {
+  transition: 500ms;
+}
+
 .dropdown-menu {
   display: none;
 }
@@ -146,6 +150,10 @@
     width: 100%;
     gap: 0.5rem;
     border-radius: 0px 0px 16px 16px;
+  }
+
+  .dropdown:hover .navigation-button > svg {
+    rotate: 180deg;
   }
 }
 
@@ -193,10 +201,6 @@
   .header-bottom-container {
     width: 100%;
     flex-direction: column;
-  }
-
-  .navigation-button > svg {
-    transition: 500ms;
   }
 
   .menu-active > .navigation-button > svg {
