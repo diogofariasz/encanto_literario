@@ -233,6 +233,8 @@
     transition: 500ms;
   }
 
+  /* Hamburguer Icon */
+
   .header-mid-hamburguer span:nth-child(1) {
     top: 0;
   }
@@ -246,6 +248,8 @@
     top: 100%;
     transform: translateY(-100%);
   }
+
+  /* Close Icon */
 
   .hamburguer-active span:nth-child(1) {
     top: 50%;
