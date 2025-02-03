@@ -70,7 +70,7 @@ const sortByBestRated = (a, b) => b.reviews.stars - a.reviews.stars;
 // Aplica a ordem na lista de livros
 const booksInOrder = booksData.slice().sort(sortByBestRated);
 
-// Filtra os livros
+// Filtra os livros se tiver uma categoria informada
 if (category) {
   const compareCategory = category.toLowerCase();
 

@@ -34,9 +34,44 @@ a {
   --green-1: #00501d;
   --green-2: #00953775;
 
-  --red-1: #6B0707;
+  --red-1: #6b0707;
   --red-2: #ec6d6d;
 
   /* Configurações */
   --tamanho-tela: 1080px;
+}
+
+/* body.no-scroll {
+  overflow: hidden;
+} */
+
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  transition: 500ms;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  color: var(--purple-1);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  opacity: 0.8;
 }

@@ -1,9 +1,17 @@
-// Ainda não terminado!!!
-
-const cartElement = document.querySelector('.cart');
+const cartsElements = document.querySelectorAll('.cart');
 const cartContainer = document.querySelector('.cart-container');
+const modalElement = document.querySelector('.modal');
+const closeModalElement = modalElement.querySelector('.modal-close');
 
-let isCartOpen = false;
+const closeModal = () => {
+  // document.body.classList.remove('no-scroll')
+  modalElement.classList.remove('modal-active');
+};
+
+const openModal = () => {
+  // document.body.classList.add('no-scroll')
+  modalElement.classList.add('modal-active');
+};
 
 const animateElement = (element, animationName, duration = '500ms') => {
   if (!element.style.animation) {
@@ -15,17 +23,16 @@ const animateElement = (element, animationName, duration = '500ms') => {
     };
 
     element.addEventListener('animationend', handleAnimationEnd);
-
-    return true;
   }
-
-  return false;
 };
 
-cartElement.addEventListener('click', () => {
-  if (animateElement(cartElement, isCartOpen ? 'rotate_front' : 'rotate_back', '1s')) {
-    isCartOpen = !isCartOpen;
-    cartContainer.style.right = isCartOpen ? '0' : '-500px';
-  }
-});
+closeModalElement.addEventListener('click', () => {
+  closeModal()
+})
 
+cartsElements.forEach((cartElement) => {
+  cartElement.addEventListener('click', () => {
+    openModal();
+    animateElement(cartElement, 'pulse');
+  });
+});
