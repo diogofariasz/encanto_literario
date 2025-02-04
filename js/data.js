@@ -223,3 +223,12 @@ const authorsData = [
     bio: 'Rick Riordan é considerado o “contador de histórias dos deuses” e já vendeu mais de 7 milhões de livros no Brasil. Além das séries Percy Jackson e os olimpianos, que deu origem à produção de sucesso do Disney+, Os heróis do Olimpo e As provações de Apolo, inspiradas na mitologia greco-romana, Riordan assina as séries As crônicas dos Kane, que visita deuses e mitos do Egito Antigo, e Magnus Chase e os deuses de Asgard, sobre mitologia nórdica. Pela Intrínseca, publicou também A filha das profundezas, O sol e a estrela: Uma aventura de Nico di Angelo, escrito em parceria com Mark Oshiro, e O cálice dos deuses, primeiro volume da nova trilogia que narra os desafios e as aventuras de Percy Jackson para entrar na universidade.',
   },
 ];
+
+const usuarios = [
+  {
+    id: 1,
+    name: 'Cleiton',
+    email: 'cleiton@gmail.com',
+    senha: '12345678'
+  }
+]
