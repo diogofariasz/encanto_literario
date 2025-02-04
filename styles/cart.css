@@ -103,3 +103,9 @@
     scale: 1;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .cart-items {
+    --container-max-height: 12rem;
+  }
+}

@@ -4,12 +4,12 @@ const modalElement = document.querySelector('.modal');
 const closeModalElement = modalElement.querySelector('.modal-close');
 
 const closeModal = () => {
-  // document.body.classList.remove('no-scroll')
+  document.body.classList.remove('no-scroll')
   modalElement.classList.remove('modal-active');
 };
 
 const openModal = () => {
-  // document.body.classList.add('no-scroll')
+  document.body.classList.add('no-scroll')
   modalElement.classList.add('modal-active');
 };
 

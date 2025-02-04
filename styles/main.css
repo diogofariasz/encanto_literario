@@ -7,6 +7,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, Arial, Helvetica, sans-serif;
+
+  /* Scrollbar Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
 
 a {
@@ -41,10 +45,11 @@ a {
   --tamanho-tela: 1080px;
 }
 
-/* body.no-scroll {
+body.no-scroll {
   overflow: hidden;
-} */
+}
 
+/* Estilização para o modal */
 .modal {
   position: fixed;
   top: 0;
@@ -74,4 +79,19 @@ a {
 
 .modal-close:hover {
   opacity: 0.8;
+}
+
+/* Estilização da scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
 }
