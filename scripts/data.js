@@ -224,11 +224,11 @@ const authorsData = [
   },
 ];
 
-const usuarios = [
+const usersData = [
   {
     id: 1,
     name: 'Cleiton',
     email: 'cleiton@gmail.com',
-    senha: '12345678'
+    password: '12345678'
   }
 ]

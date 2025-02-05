@@ -77,6 +77,27 @@ body.no-scroll {
   opacity: 0.8;
 }
 
+/* Botão genérico */
+.button {
+  border-radius: 10px;
+  background-color: var(--purple-2);
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  color: white;
+
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
 /* Estilização da scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

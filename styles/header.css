@@ -79,23 +79,6 @@
   display: none;
 }
 
-.button {
-  border-radius: 10px;
-  background-color: var(--purple-2);
-  padding: 0.5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  transition: 500ms;
-}
-
-.button:hover {
-  opacity: 0.8;
-}
-
 .header-bottom {
   background-color: var(--purple-5);
 }

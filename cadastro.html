@@ -3,61 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Cadastro</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles/formulario.css" />
-    <script src="main.js"></script>
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script defer src="scripts/login.js"></script>
   </head>
   <body>
-    <section class="area-login">
-      <div class="login">
+    <section class="form-container">
+      <form class="form">
         <h1>Cadastro</h1>
-        <input
-          type="text"
-          name="nome"
-          placeholder="Usuário"
-          id="email"
-          class="form-control"
-          autofocus
-        />
-        <input
-          type="text"
-          name="nome"
-          placeholder="Email"
-          id="email"
-          class="form-control"
-          autofocus
-        />
-        <input
-          type="password"
-          name="senha"
-          placeholder="Senha"
-          id="senha"
-          class="form-control"
-          autofocus
-        />
-        <button onclick="window.location.href='usuario.html'" class="btn" type="button">Entre</button>
-        <br />
-        <a href="#">Esqueci minha senha</a>
-        <p class="po">ou</p>
 
-        <div class="loginn">
-          <div class="loginn2">
-            <a href="#"><img src="assets/icons/google.svg" width="50px" alt="" /></a>
+        <div class="inputs">
+          <div class="input-container">
+            <input type="text" name="name" placeholder="Nome" id="name" class="input" autofocus />
           </div>
 
-          <div class="loginn2">
-            <a href="#"><img src="assets/icons/twitter.svg" alt="" /></a>
+          <div class="input-container">
+            <input
+              type="text"
+              name="email"
+              placeholder="E-mail"
+              id="email"
+              class="input"
+              autofocus
+            />
           </div>
 
-          <div class="loginn2">
-            <a href="#"><img src="assets/icons/facebook.svg" alt="" /></a>
+          <div class="input-container">
+            <input
+              type="password"
+              name="senha"
+              placeholder="Senha"
+              id="senha"
+              class="input"
+              autofocus
+            />
           </div>
         </div>
 
-        <p class="po">Já tem cadastro?<a href="login.html">Login</a></p>
-        <br />
-      </div>
+        <button id="submit" class="button" type="button">Entre</button>
+
+        <a class="forget-password" href="#">Esqueci minha senha</a>
+
+        <p class="form-division">ou</p>
+
+        <div class="auth-options">
+          <div class="auth-option">
+            <img src="assets/logos/google-logo.svg" alt="" />
+          </div>
+
+          <div class="auth-option">
+            <img src="assets/logos/twitter-logo.svg" alt="" />
+          </div>
+
+          <div class="auth-option">
+            <img src="assets/logos/facebook-logo.svg" alt="" />
+          </div>
+        </div>
+
+        <p class="other-option">Já possui conta? <a href="login.html">Entre</a></p>
+      </form>
     </section>
   </body>
 </html>

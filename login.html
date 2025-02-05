@@ -6,49 +6,51 @@
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles/formulario.css" />
-    <script defer src="js/login.js"></script>
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script defer src="scripts/utils.js"></script>
+    <script defer src="scripts/data.js"></script>
+    <script defer src="scripts/login.js"></script>
   </head>
   <body>
-    <section class="area-login">
-      <form class="login">
-        <h1>Login</h1>
-        <input
-          type="text"
-          name="nome"
-          placeholder="Usuário ou Email"
-          id="email"
-          class="form-control"
-          autofocus
-        />
-        <input
-          type="password"
-          name="senha"
-          placeholder="Senha"
-          id="senha"
-          class="form-control"
-          autofocus
-        />
-        <button id="submit" class="btn" type="button">Entre</button>
-        <br />
-        <a href="#">Esqueci minha senha</a>
-        <p class="po">ou</p>
+    <section class="form-container">
+      <form class="form">
+        <h1>Entrar</h1>
 
-        <div class="loginn">
-          <div class="loginn2">
-            <a href="#"><img src="assets/icons/google.svg" alt="" /></a>
+        <div class="inputs">
+          <div id="email" class="input-container">
+            <input type="text" name="email" placeholder="E-mail" autofocus />
           </div>
 
-          <div class="loginn3">
-            <a href="#"><img src="assets/icons/twitter.svg" alt="" /></a>
-          </div>
-
-          <div class="loginn4">
-            <a href="#"><img src="assets/icons/facebook.svg" alt="" /></a>
+          <div id="password" class="input-container">
+            <input type="password" name="password" placeholder="Senha" autofocus />
           </div>
         </div>
 
-        <p class="po">Ainda não tem cadastro?<a href="cadastro.html">Cadastrar</a></p>
-        <br />
+        <button id="submit" class="button" type="button">Entre</button>
+
+        <a class="forget-password" href="#">Esqueci minha senha</a>
+
+        <p class="form-division">ou</p>
+
+        <div class="auth-options">
+          <div class="auth-option">
+            <img src="assets/logos/google-logo.svg" alt="" />
+          </div>
+
+          <div class="auth-option">
+            <img src="assets/logos/twitter-logo.svg" alt="" />
+          </div>
+
+          <div class="auth-option">
+            <img src="assets/logos/facebook-logo.svg" alt="" />
+          </div>
+        </div>
+
+        <p class="other-option">Novo aqui? <a href="cadastro.html">Cadastre-se</a></p>
       </form>
     </section>
   </body>
