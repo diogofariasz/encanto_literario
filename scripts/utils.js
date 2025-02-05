@@ -64,8 +64,7 @@ const formatarNumero = (number) => {
 // Verifica se um número decimal possui casa decimal diferente de zero
 const possuiCasasDecimais = (numero) => numero % 1 !== 0;
 
-// Utilitários para criar elementos HTML pelo JavaScript 
-
+// Utilitário para criar elementos HTML pelo JavaScript 
 const criarElemento = (tag, { text = '', className = '', children = [], attributes = {} } = {}) => {
   const elemento = document.createElement(tag);
 
@@ -77,27 +76,3 @@ const criarElemento = (tag, { text = '', className = '', children = [], attribut
 
   return elemento;
 };
-
-const Div = ({ text, className, children = [] }) =>
-  criarElemento('div', { text, className, children });
-
-const Link = ({ text, href, className, children = [] }) =>
-  criarElemento('a', { text, className, children, attributes: { href } });
-
-const NumberInput = ({ className, attributes }) =>
-  criarElemento('input', {
-    className,
-    attributes: {
-      type: 'number',
-      ...attributes,
-    },
-  });
-
-const Imagem = (src, alt, className) =>
-  criarElemento('img', { className, attributes: { src, alt } });
-
-const Paragrafo = (text, className) => criarElemento('p', { text, className });
-
-const Strong = (text, className) => criarElemento('strong', { text, className });
-
-const Span = (text, className) => criarElemento('span', { text, className });

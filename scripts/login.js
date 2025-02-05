@@ -13,7 +13,7 @@ function removeErrorMessage(element) {
 }
 
 function createErrorMessage(message) {
-  return Div({
+  return criarElemento('div', {
     className: 'error-message',
     text: message,
   });
@@ -98,21 +98,19 @@ function handleLoginVerification() {
   // No futuro essas verificações serão feitas pelo backend
   const user = usersData.find((userData) => userData.email === email);
 
-  console.log(password);
-
   if (!user) {
     emailInputElement.classList.add('input-error');
     emailElement.appendChild(createErrorMessage('Este e-mail não é válido.'));
-    return false;
+    return undefined;
   }
 
   if (user.password != password) {
     passwordInputElement.classList.add('input-error');
     passwordElement.appendChild(createErrorMessage('Senha incorreta.'));
-    return false;
+    return undefined;
   }
 
-  return true;
+  return user;
 }
 
 emailElement.addEventListener('input', () => handleEmailVerification());
@@ -125,7 +123,15 @@ submitElement.addEventListener('click', (event) => {
   const isValidEmail = handleEmailVerification();
   const isValidPassword = handlePasswordVerification();
 
-  if (isValidEmail && isValidPassword && handleLoginVerification()) {
-    console.log('Logado');
+  if (isValidEmail && isValidPassword) {
+    const user = handleLoginVerification();
+
+    if (!user) return;
+
+    // salvar dados do usuário
+    console.log(user);
+
+    // Redireciona para a página do usuário
+    window.location.href = '/usuario.html';
   }
 });
