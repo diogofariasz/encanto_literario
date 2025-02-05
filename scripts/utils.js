@@ -1,3 +1,37 @@
+// Remove o elemento de mensagem de erro
+function removeErrorMessage(element) {
+  const errorMessageElement = element.querySelector('.error-message');
+  if (errorMessageElement) {
+    errorMessageElement.remove();
+  }
+}
+
+// Cria um elemento de mensagem de erro
+function createErrorMessage(message) {
+  return criarElemento('div', {
+    className: 'error-message',
+    text: message,
+  });
+}
+
+// Verifica se um e-mail é válido
+function isValidUserName(nome) {
+  const regex = /^[a-zA-Z\s]{4,30}$/;
+  return regex.test(nome);
+}
+
+// Verifica se um e-mail é válido
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Verifica se uma senha é válida
+function isValidPassword(password) {
+  const passwrodRegex = /^[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;<>,.?/~\\-]{8,20}$/;
+  return passwrodRegex.test(password);
+}
+
 // Calcula a data que vai ser daqui a uma certa quantidade de dias
 // e retorna uma String formatada com essa informação.
 function calcularDataComDias(dias) {
