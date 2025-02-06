@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Usuário</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autor</title>
 
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-    
+
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/livros.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/cart.css" />
-    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/livro.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/usuario.css" />
 
-    <script defer src="scripts/data.js"></script>
     <script defer src="scripts/utils.js"></script>
-    <script defer src="scripts/livros.js"></script>
-    <script defer src="scripts/cart.js"></script>
     <script defer src="scripts/mobile.js"></script>
-
+    <script defer src="scripts/data.js"></script>
+    <script defer src="scripts/livro.js"></script>
+    <script defer src="scripts/cart.js"></script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer>
       document.addEventListener('DOMContentLoaded', () => {
@@ -155,26 +149,8 @@
       </nav>
     </header>
 
-    <!--AQUI SE MEXE EM TODO O CONTEUDO DA PÁGINA-->
-    <div class="super-usuario">
-      <div class="usuario2">
-        <img src="assets/user-default-pic.svg" alt="" />
-        <div class="box">
-          <p>Nome de Usuário:</p>
-          <p>Email:</p>
-          <p>Telefone:</p>
-          <button class="btn" type="button">Alterar senha</button>
-          <button class="btn" type="button">Alterar foto de perfil</button>
-        </div>
-      </div>
-
-      <div class="usuario3">
-        <a href="#"><p>Informações Pessoais</p></a>
-        <a href="#"><p>Seus Pedidos</p></a>
-        <a href="#"><p>Idioma</p></a>
-        <a href="#"><p>Excluir Conta</p></a>
-      </div>
-    </div>
+    <!-- Área do livro -->
+    <main class="author" id="author"></main>
 
     <!-- Rodapé -->
     <footer class="footer">
