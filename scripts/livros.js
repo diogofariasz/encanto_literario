@@ -1,6 +1,3 @@
-const url = new URL(window.location.href); // Pega os dados da url
-const category = url.searchParams.get('category'); // Pega a categoria que está no url
-
 // Elemento onde vai estar os livros
 const booksContainerElement = document.querySelector('.livros-container');
 
@@ -12,10 +9,17 @@ function createCardElement({ id, title, image_url, reviews, price, delivery }) {
 
   // Constrói os elementos de imagem das estrelas
   const starRatingElements = Array.from({ length: 5 }, (_, i) => {
-    if (i < starsInteger) return criarElemento('img', { attributes: { src: './assets/icons/star.svg', alt: 'Estrela cheia' } });
+    if (i < starsInteger)
+      return criarElemento('img', {
+        attributes: { src: './assets/icons/star.svg', alt: 'Estrela cheia' },
+      });
     if (i === starsInteger && hasHalfStar)
-      return criarElemento('img', { attributes: { src: './assets/icons/half-star.svg', alt: 'Meia estrela' } });
-    return criarElemento('img', { attributes: { src: './assets/icons/gray-star.svg', alt: 'Estrela cinza' } });
+      return criarElemento('img', {
+        attributes: { src: './assets/icons/half-star.svg', alt: 'Meia estrela' },
+      });
+    return criarElemento('img', {
+      attributes: { src: './assets/icons/gray-star.svg', alt: 'Estrela cinza' },
+    });
   });
 
   // Estimativa de entrega
@@ -26,13 +30,18 @@ function createCardElement({ id, title, image_url, reviews, price, delivery }) {
     className: 'livro',
     attributes: { href: `/livro.html?id=${id}#livro` },
     children: [
-      criarElemento('img', { attributes: { src: image_url, alt: 'Capa do livro', class: 'livro-capa' } }),
+      criarElemento('img', {
+        attributes: { src: image_url, alt: 'Capa do livro', class: 'livro-capa' },
+      }),
       criarElemento('p', { text: title, className: 'livro-titulo' }),
       criarElemento('div', {
         className: 'livro-avaliacao',
         children: [
           criarElemento('div', { className: 'avaliacao-estrelas', children: starRatingElements }),
-          criarElemento('span', { text: `(${formatarNumero(reviewsAmount)})`, className: 'avaliacao-quantidade' }),
+          criarElemento('span', {
+            text: `(${formatarNumero(reviewsAmount)})`,
+            className: 'avaliacao-quantidade',
+          }),
         ],
       }),
       criarElemento('div', {
@@ -43,7 +52,10 @@ function createCardElement({ id, title, image_url, reviews, price, delivery }) {
             className: 'livro-preco-pix',
             children: [criarElemento('span', { text: 'no pix' })],
           }),
-          criarElemento('p', { text: `com ${price.discount}% de desconto`, className: 'livro-desconto' }),
+          criarElemento('p', {
+            text: `com ${price.discount}% de desconto`,
+            className: 'livro-desconto',
+          }),
         ],
       }),
       criarElemento('p', {
@@ -67,17 +79,28 @@ const sortByWorstRated = (a, b) => a.assessment.value - b.assessment.value;
 // Classifica os livros do mais bem avaliado ao menos avaliado.
 const sortByBestRated = (a, b) => b.reviews.stars - a.reviews.stars;
 
+// Pega a categoria que pode estar no url
+const category = url.searchParams.get('category');
+// Pega o id do autor que pode estar no url
+const autorId = url.searchParams.get('autorId');
+
 // Aplica a ordem na lista de livros
 const booksInOrder = booksData.slice().sort(sortByBestRated);
 
-// Filtra os livros se tiver uma categoria informada
+let books = [...booksInOrder];
+
+// Filtra os livros se informado categoria/autor
 if (category) {
   const compareCategory = category.toLowerCase();
 
-  booksInOrder.forEach((livro) => {
-    if (compareCategory === livro.category.toLocaleLowerCase())
-      booksContainerElement.appendChild(createCardElement(livro));
-  });
-} else {
-  booksInOrder.forEach((livro) => booksContainerElement.appendChild(createCardElement(livro)));
+  books = books.filter((livro) => compareCategory === livro.category.toLowerCase());
+} else if (autorId) {
+  const authorData = authorsData.find((author) => author.id == autorId);
+
+  books = books.filter((livro) => livro.author == authorData.name);
 }
+
+// Adiciona os livro ao HTML
+books.forEach((livro) => {
+  booksContainerElement.appendChild(createCardElement(livro));
+});

@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="styles/author.css" />
     <link rel="stylesheet" href="styles/livro.css" />
+    <link rel="stylesheet" href="styles/livros.css" />
     <link rel="stylesheet" href="styles/footer.css" />
 
     <script defer src="scripts/utils.js"></script>
     <script defer src="scripts/mobile.js"></script>
     <script defer src="scripts/data.js"></script>
-    <script defer src="scripts/livro.js"></script>
+    <script defer src="scripts/author.js"></script>
+    <script defer src="scripts/livros.js"></script>
     <script defer src="scripts/cart.js"></script>
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer>
@@ -149,8 +152,17 @@
       </nav>
     </header>
 
-    <!-- Área do livro -->
-    <main class="author" id="author"></main>
+    <!-- Conteúdo Principal -->
+    <main>
+      <!-- Área do author -->
+      <section class="author"></section>
+
+      <!-- Área dos livros -->
+      <section class="livros" id="livros">
+        <!-- Container dos livros -->
+        <div class="livros-container"></div>
+      </section>
+    </main>
 
     <!-- Rodapé -->
     <footer class="footer">

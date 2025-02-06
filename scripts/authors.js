@@ -4,7 +4,7 @@ const authorsContainers = document.querySelector('.authors-container');
 function createAuthorCard({ id, name, image_url }) {
   return criarElemento('a', {
     className: 'author-card',
-    attributes: { href: `/author.html?id=${id}` },
+    attributes: { href: `/autor.html?autorId=${id}` },
     children: [
       criarElemento('p', { text: name }),
       criarElemento('img', { attributes: { src: image_url, alt: name } })

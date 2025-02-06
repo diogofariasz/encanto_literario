@@ -1,3 +1,5 @@
+const url = new URL(window.location.href); // Pega os dados da url
+
 // Remove o elemento de mensagem de erro
 function removeErrorMessage(element) {
   const errorMessageElement = element.querySelector('.error-message');
