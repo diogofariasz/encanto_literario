@@ -1,16 +1,33 @@
-const productContainers = [...document.querySelectorAll('.authors-container')];
-const nxtBtn = [...document.querySelectorAll('.next-btn')];
-const preBtn = [...document.querySelectorAll('.previous-btn')];
+const authorsContainers = document.querySelector('.authors-container');
 
-productContainers.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
+// Cria um card
+function createAuthorCard({ id, name, image_url }) {
+  return criarElemento('a', {
+    className: 'author-card',
+    attributes: { href: `/author.html?id=${id}` },
+    children: [
+      criarElemento('p', { text: name }),
+      criarElemento('img', { attributes: { src: image_url, alt: name } })
+    ]
+  })
+}
 
-  nxtBtn[i].addEventListener('click', () => {
-    item.scrollLeft += containerWidth;
-  });
+// Adiciona os cards
+authorsData.forEach(author => {
+  authorsContainers.appendChild(createAuthorCard(author))
+});
 
-  preBtn[i].addEventListener('click', () => {
-    item.scrollLeft -= containerWidth;
-  });
+// Funcionalidade de scroll
+const nxtBtn = document.querySelector('.next-btn');
+const preBtn = document.querySelector('.previous-btn');
+
+let containerDimensions = authorsContainers.getBoundingClientRect();
+let containerWidth = containerDimensions.width;
+
+nxtBtn.addEventListener('click', () => {
+  authorsContainers.scrollLeft += containerWidth;
+});
+
+preBtn.addEventListener('click', () => {
+  authorsContainers.scrollLeft -= containerWidth;
 });

@@ -188,9 +188,9 @@ const authorsData = [
   },
   {
     id: 2,
-    name: 'Felipe Neto',
-    image_url: 'https://i.pinimg.com/736x/ca/44/d6/ca44d6a81685c4ffa5e90131719532e0.jpg',
-    bio: 'Considerado um dos maiores youtubers do Brasil, Felipe Neto batalhou, e muito, para conquistar toda a fama que tem hoje. A explosão do youtuber não se deu do dia para a noite, ao contrário, exigiu muita dedicação e amadurecimento ao longo de sua caminhada. Com mais 20 milhões de inscritos em seu canal, Felipe leva a sério o seu trabalho e nunca falha em seu compromisso diário: levar entretenimento para os seus fãs através de seus vídeos.',
+    name: 'Rick Riordan',
+    image_url: 'https://i.pinimg.com/736x/73/3b/86/733b8638810a7dfcd4160db157128875.jpg',
+    bio: 'Rick Riordan é considerado o “contador de histórias dos deuses” e já vendeu mais de 7 milhões de livros no Brasil. Além das séries Percy Jackson e os olimpianos, que deu origem à produção de sucesso do Disney+, Os heróis do Olimpo e As provações de Apolo, inspiradas na mitologia greco-romana, Riordan assina as séries As crônicas dos Kane, que visita deuses e mitos do Egito Antigo, e Magnus Chase e os deuses de Asgard, sobre mitologia nórdica. Pela Intrínseca, publicou também A filha das profundezas, O sol e a estrela: Uma aventura de Nico di Angelo, escrito em parceria com Mark Oshiro, e O cálice dos deuses, primeiro volume da nova trilogia que narra os desafios e as aventuras de Percy Jackson para entrar na universidade.',
   },
   {
     id: 3,
@@ -200,27 +200,27 @@ const authorsData = [
   },
   {
     id: 4,
-    name: 'Lucas Scudeler',
-    image_url: 'https://i.pinimg.com/736x/46/0d/3e/460d3ee246d2c31c38238464f473a846.jpg',
-    bio: 'Lucas é Teólogo, Filósofo e Psicanalista com ênfase em Relacionamentos e já ajudou mais de 18.000 alunos a encontrarem felicidade em suas vidas e em suas relações. Casado há mais de 10 anos e junto de sua esposa desde os 18 anos de idade, pai da Mari, e com milhares de horas de estudos em comportamento humano, Lucas traz uma bagagem única para te mostrar que você também pode ser feliz e realizado(a) em um casamento. Além disso, Lucas é diretor de neurociência da Sociedade Brasileira de Medicina da Obesidade.',
-  },
-  {
-    id: 5,
     name: 'Mark Manson',
     image_url: 'https://i.pinimg.com/736x/b0/41/08/b041080755b6032ae143d599f7f33e15.jpg',
     bio: 'Mark Manson é autor de A sutil arte de ligar o f*da-se, best-seller global que já teve mais de dez milhões de exemplares vendidos, e de F*deu geral, ambos publicados pela Intrínseca. Com seu jeito irreverente, perspicaz e sem meias palavras, atraiu uma audiência gigantesca para seu blog — markmanson.net —, lido por dois milhões de pessoas mensalmente. Manson mora em Nova York.',
   },
   {
-    id: 6,
+    id: 5,
     name: 'Morgan Housel',
     image_url: 'https://i.pinimg.com/736x/2c/3c/14/2c3c147ba7e2afda65c81d1a4e7856e1.jpg',
     bio: 'Morgan Housel é sócio do The Collaborative Fund e ex-colunista na The Motley Fool Stock Advisor e do The Wall Street Journal. Ele é vencedor de dois Best Business Award da Society of American Business Editors and Writers and Financial Journalism. Mora em Seattle com a esposa e os dois filhos.',
   },
   {
+    id: 6,
+    name: 'Lucas Scudeler',
+    image_url: 'https://i.pinimg.com/736x/46/0d/3e/460d3ee246d2c31c38238464f473a846.jpg',
+    bio: 'Lucas é Teólogo, Filósofo e Psicanalista com ênfase em Relacionamentos e já ajudou mais de 18.000 alunos a encontrarem felicidade em suas vidas e em suas relações. Casado há mais de 10 anos e junto de sua esposa desde os 18 anos de idade, pai da Mari, e com milhares de horas de estudos em comportamento humano, Lucas traz uma bagagem única para te mostrar que você também pode ser feliz e realizado(a) em um casamento. Além disso, Lucas é diretor de neurociência da Sociedade Brasileira de Medicina da Obesidade.',
+  },
+  {
     id: 7,
-    name: 'Rick Riordan',
-    image_url: 'https://i.pinimg.com/736x/73/3b/86/733b8638810a7dfcd4160db157128875.jpg',
-    bio: 'Rick Riordan é considerado o “contador de histórias dos deuses” e já vendeu mais de 7 milhões de livros no Brasil. Além das séries Percy Jackson e os olimpianos, que deu origem à produção de sucesso do Disney+, Os heróis do Olimpo e As provações de Apolo, inspiradas na mitologia greco-romana, Riordan assina as séries As crônicas dos Kane, que visita deuses e mitos do Egito Antigo, e Magnus Chase e os deuses de Asgard, sobre mitologia nórdica. Pela Intrínseca, publicou também A filha das profundezas, O sol e a estrela: Uma aventura de Nico di Angelo, escrito em parceria com Mark Oshiro, e O cálice dos deuses, primeiro volume da nova trilogia que narra os desafios e as aventuras de Percy Jackson para entrar na universidade.',
+    name: 'Felipe Neto',
+    image_url: 'https://i.pinimg.com/736x/ca/44/d6/ca44d6a81685c4ffa5e90131719532e0.jpg',
+    bio: 'Considerado um dos maiores youtubers do Brasil, Felipe Neto batalhou, e muito, para conquistar toda a fama que tem hoje. A explosão do youtuber não se deu do dia para a noite, ao contrário, exigiu muita dedicação e amadurecimento ao longo de sua caminhada. Com mais 20 milhões de inscritos em seu canal, Felipe leva a sério o seu trabalho e nunca falha em seu compromisso diário: levar entretenimento para os seus fãs através de seus vídeos.',
   },
 ];
 
@@ -229,6 +229,7 @@ const usersData = [
     id: 1,
     name: 'Cleiton',
     email: 'cleiton@gmail.com',
-    password: '12345678'
-  }
-]
+    isAdmin: false,
+    password: '12345678',
+  },
+];
