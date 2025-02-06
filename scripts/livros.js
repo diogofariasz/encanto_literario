@@ -95,9 +95,9 @@ if (category) {
 
   books = books.filter((livro) => compareCategory === livro.category.toLowerCase());
 } else if (autorId) {
-  const authorData = authorsData.find((author) => author.id == autorId);
+  const authorData = getAuthorById(autorId);
 
-  books = books.filter((livro) => livro.author == authorData.name);
+  books = books.filter((livro) => livro.author.name == authorData.name);
 }
 
 // Adiciona os livro ao HTML
