@@ -76,27 +76,67 @@
 
 }
 .ntb{
-  width: 73%;
+  width: 70%;
   padding: 10px;
-  background: #6a0dad;
+  background:var(--purple-2);
   color: white;
-  
+  font-weight: bold;
   border-radius: 5px;
 }
 
-textarea, button{
-  
+textarea{
+  width:100%;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  margin-left: 60px;
+  margin-left: 50px;
+}
+button{
+  padding: 10px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-left:80px;
 }
 
 input{
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  margin-left: 60px;
+  margin-left: 80px;
+ 
 }
+
+input[type="date"]{
+  width: 80%;
+}
+
+
+.filee{
+  display: none;
+}
+.custom-file-upload {
+  display: inline-block;
+  background-color: var(--purple-2);
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+  margin-left: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.image-up{
+  margin-right: 100px;
+  display: flex;
+  gap: 20px;
+}
+
+
+
 
 
