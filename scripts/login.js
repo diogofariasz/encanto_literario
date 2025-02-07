@@ -108,6 +108,12 @@ submitElement.addEventListener('click', (event) => {
     console.log(user);
 
     // Redireciona para a página do usuário
-    window.location.href = '/usuario.html';
+    if (user.isAdmin) {
+      window.location.href = '/adm.html';
+    } else {
+      window.location.href = '/usuario.html';
+    }
+
+    
   }
 });

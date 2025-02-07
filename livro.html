@@ -34,7 +34,6 @@
       <!-- Parte do meio do cabeçalho -->
       <div class="header-mid">
         <div class="header-mid-container">
-
           <!-- Caixa de pesquisa -->
           <div class="input-container">
             <input type="text" placeholder="O que você deseja?" id="search" />
@@ -73,7 +72,6 @@
 
       <!-- Parte inferior do cabeçalho -->
       <nav class="header-bottom">
-
         <!-- Parte mobile -->
         <div class="header-mid-mobile">
           <!-- Caixa de pesquisa mobile -->
@@ -92,7 +90,7 @@
             </div>
 
             <!-- Botão do usuário mobile -->
-            <div class="button" style="background-color: var(--gray-3)">
+            <div onclick="window.location.href = './cadastro.html'" class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </div>
           </div>
@@ -116,7 +114,9 @@
               <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
               <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
               <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
-              <a class="dropdown-menu-option" href="/?category=educação financeira#livros">Educação financeira</a>
+              <a class="dropdown-menu-option" href="/?category=educação financeira#livros"
+                >Educação financeira</a
+              >
             </div>
           </div>
 

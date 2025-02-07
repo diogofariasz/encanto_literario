@@ -295,7 +295,7 @@ const usersData = [
     id: 1,
     name: 'Cleiton',
     email: 'cleiton@gmail.com',
-    isAdmin: false,
+    isAdmin: true,
     password: '12345678',
   },
 ];
