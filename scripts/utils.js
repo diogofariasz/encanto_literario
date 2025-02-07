@@ -1,3 +1,22 @@
+const url = new URL(window.location.href); // Pega os dados da url
+
+// Aplica a funcionalidade de slider em um elemento
+function applySlider(element) {
+  const nxtBtn = document.querySelector('.next-btn');
+  const preBtn = document.querySelector('.previous-btn');
+
+  let containerDimensions = element.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+
+  nxtBtn.addEventListener('click', () => {
+    element.scrollLeft += containerWidth;
+  });
+
+  preBtn.addEventListener('click', () => {
+    element.scrollLeft -= containerWidth;
+  });
+}
+
 // Remove o elemento de mensagem de erro
 function removeErrorMessage(element) {
   const errorMessageElement = element.querySelector('.error-message');
@@ -98,7 +117,7 @@ const formatarNumero = (number) => {
 // Verifica se um número decimal possui casa decimal diferente de zero
 const possuiCasasDecimais = (numero) => numero % 1 !== 0;
 
-// Utilitário para criar elementos HTML pelo JavaScript 
+// Utilitário para criar elementos HTML pelo JavaScript
 const criarElemento = (tag, { text = '', className = '', children = [], attributes = {} } = {}) => {
   const elemento = document.createElement(tag);
 
