@@ -9,7 +9,7 @@
     <script src="main.js"></script>
 
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
-    
+
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/livros.css" />
     <link rel="stylesheet" href="../styles/header.css" />
@@ -41,7 +41,6 @@
       <!-- Parte do meio do cabeçalho -->
       <div class="header-mid">
         <div class="header-mid-container">
-
           <!-- Caixa de pesquisa -->
           <div class="input-container">
             <input type="text" placeholder="O que você deseja?" id="search" />
@@ -64,7 +63,7 @@
             </div>
 
             <!-- Botão da área do usuário -->
-            <a href="cadastro.html" class="button" style="background-color: var(--gray-3)">
+            <a href="../cadastro.html" class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </a>
           </div>
@@ -80,7 +79,6 @@
 
       <!-- Parte inferior do cabeçalho -->
       <nav class="header-bottom">
-
         <!-- Parte mobile -->
         <div class="header-mid-mobile">
           <!-- Caixa de pesquisa mobile -->
@@ -99,9 +97,9 @@
             </div>
 
             <!-- Botão do usuário mobile -->
-            <div class="button" style="background-color: var(--gray-3)">
+            <a href="../cadastro.html" class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -123,7 +121,9 @@
               <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
               <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
               <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
-              <a class="dropdown-menu-option" href="/?category=educação financeira#livros">Educação financeira</a>
+              <a class="dropdown-menu-option" href="/?category=educação financeira#livros"
+                >Educação financeira</a
+              >
             </div>
           </div>
 
@@ -157,37 +157,36 @@
     </header>
 
     <!--AQUI SE MEXE EM TODO O CONTEUDO DA PÁGINA-->
-    <div class="super-usuario">
-      <div class="usuario2">
+    <div class="user-container">
+      <div class="user-dashboard">
         <img src="../assets/user-default-pic.svg" alt="" />
-        <div class="box">
-          <p>Nome de Usuário:</p>
 
-          <div class="addlivro">
-            <div class="livros-add">
-                <input type="text" placeholder="Nome">
-
-                <label class="custom-file-upload"> 
-                 <div class="image-up"> <i data-lucide="image-up"></i>Escolher arquivo</div>
-                  <input class="filee" type="file" placeholder="Capas"> 
-                </label>
-            </div>
-                <input type="text" placeholder="Idade">
-            <div class="livros-add">
-
-                <input type="date" placeholder="Data de Nascimento">
-                <textarea placeholder="Descrição do Autor"></textarea>
-            </div>
-            <button class="ntb" data-msg="Autor cadastrado com sucesso!">Cadastrar Livro</button>
+        <div class="user-options">
+          <a class="user-back" href="../adm.html">
+            <i data-lucide="arrow-left"></i>
+          </a>
         </div>
       </div>
 
-      <div class="usuario3">
-        <a href="#"><p>Informações Pessoais</p></a>
-        <a href="#"><p>Seus Pedidos</p></a>
-        <a href="#"><p>Idioma</p></a>
-        <a href="#"><p>Excluir Conta</p></a>
-      </div>
+      <form class="user-informations">
+        <div class="input-container">
+          <label for="name">Nome do Autor</label>
+          <input id="name" type="text" placeholder="Nome" />
+        </div>
+        <div class="input-container">
+          <label for="bio">Nome do Biografia</label>
+          <textarea id="bio" placeholder="Biografia"></textarea>
+        </div>
+
+        <div class="input-container">
+          <label for="pic">Foto do Autor</label>
+          <input type="image" id="pic" />
+        </div>
+
+        <button class="button" type="submit" data-msg="Autor criado com sucesso">
+          Criar autor
+        </button>
+      </form>
     </div>
 
     <!-- Rodapé -->
@@ -272,7 +271,7 @@
               <i data-lucide="trash-2"></i>
             </div>
           </div>
-          
+
           <div class="cart-item">
             <div class="cart-item-info">
               <img
@@ -368,9 +367,7 @@
 
         <div class="cart-total">
           <p>Preço: R$ 300.000</p>
-          <div class="button">
-            Comprar
-          </div>
+          <div class="button">Comprar</div>
         </div>
       </div>
     </div>

@@ -293,8 +293,15 @@ const booksData = [
 const usersData = [
   {
     id: 1,
-    name: 'Cleiton',
-    email: 'cleiton@gmail.com',
+    name: 'Usuário',
+    email: 'usuario@gmail.com',
+    isAdmin: false,
+    password: '12345678',
+  },
+  {
+    id: 2,
+    name: 'Admin',
+    email: 'admin@gmail.com',
     isAdmin: true,
     password: '12345678',
   },
