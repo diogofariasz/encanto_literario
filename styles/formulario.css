@@ -28,6 +28,7 @@
   flex-direction: column;
   gap: .5rem;
   width: 100%;
+  position: relative;
 }
 
 .input-container input {
@@ -36,6 +37,10 @@
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: var(--gray-3);
+}
+
+#password input {
+  padding-right: 2.5rem;
 }
 
 .input-container input:focus {
@@ -49,6 +54,36 @@
 .input-container .error-message {
   color: var(--red-2);
   font-size: 14px;
+}
+
+.see-password {
+  position: absolute;
+  right: 10px;
+  top: 24px;
+  transform: translate(0, -50%);
+  color: var(--purple-1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .3;
+  transition: 500ms;
+}
+
+.see-password:hover {
+  opacity: 1;
+}
+
+.see-password > .lucide-eye {
+  display: none;
+}
+
+.see-password-active > .lucide-eye {
+  display: block;
+}
+
+.see-password-active > .lucide-eye-closed {
+  display: none;
 }
 
 .forget-password {

@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/formulario.css" />
-
+    
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-
+    
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/formulario.css" />
 
     <script defer src="scripts/utils.js"></script>
     <script defer src="scripts/data.js"></script>
     <script defer src="scripts/login.js"></script>
+
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+      });
+    </script>
   </head>
   <body>
     <section class="form-container">
@@ -27,6 +34,11 @@
 
           <div id="password" class="input-container">
             <input type="password" name="password" placeholder="Senha" autofocus />
+            
+            <div class="see-password">
+              <i data-lucide="eye-closed"></i>
+              <i data-lucide="eye"></i>
+            </div>
           </div>
         </div>
 

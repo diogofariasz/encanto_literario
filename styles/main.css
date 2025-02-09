@@ -45,6 +45,14 @@ body.no-scroll {
   overflow: hidden;
 }
 
+/* Desabilita a opção padrão de ver senha do browser */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-show-password-button {
+  display: none;
+}
+
 /* Estilização para o modal */
 .modal {
   position: fixed;

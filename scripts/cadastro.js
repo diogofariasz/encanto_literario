@@ -6,6 +6,7 @@ const submitElement = document.querySelector('#submit');
 const nameInputElement = nameElement.querySelector('input');
 const emailInputElement = emailElement.querySelector('input');
 const passwordInputElement = passwordElement.querySelector('input');
+const seePasswordElement = passwordElement.querySelector('.see-password');
 
 function handleNameVerification() {
   const alreadyHasError = nameElement.querySelector('.error-message');
@@ -126,6 +127,13 @@ function handleRegisterVerification() {
 nameElement.addEventListener('input', () => handleNameVerification());
 emailElement.addEventListener('input', () => handleEmailVerification());
 passwordElement.addEventListener('input', () => handlePasswordVerification());
+seePasswordElement.addEventListener('click', () => {
+  if (seePasswordElement.classList.toggle('see-password-active')) {
+    passwordInputElement.type = "text"
+  } else {
+    passwordInputElement.type = "password"
+  }
+});
 
 // Quando clicar no botão
 submitElement.addEventListener('click', (event) => {
