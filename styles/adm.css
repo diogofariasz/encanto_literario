@@ -132,6 +132,25 @@
   color: var(--purple-2);
 }
 
+
+.input-container input[type="file"]::-webkit-file-upload-button {
+  /* visibility: hidden; */
+  display: inline-block;
+  background: var(--purple-2);
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  color: white;
+  font-size: 12px;
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.input-container input[type="file"]::-webkit-file-upload-button:hover {
+  opacity: .6;
+}
+
 @media screen and (max-width: 700px) {
   .user-container {
     flex-direction: column;
