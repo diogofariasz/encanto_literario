@@ -50,6 +50,7 @@
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  overflow-x: scroll;
 }
 
 .user-informations p {
@@ -132,9 +133,47 @@
   color: var(--purple-2);
 }
 
+.user-informations table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.user-informations th, .user-informations td {
+  padding: .5rem;
+  text-align: left;
+}
+
+.user-informations th {
+  color: white;
+  text-transform: capitalize;
+}
+
+.user-informations tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-informations tr:hover {
+  background-color: #b3b3b3;
+  cursor: pointer;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-informations th {
+  padding-block: 1rem;
+  padding-inline: .5rem;
+  background-color: var(--purple-4);
+}
 
 .input-container input[type="file"]::-webkit-file-upload-button {
-  /* visibility: hidden; */
   display: inline-block;
   background: var(--purple-2);
   border-radius: .5rem;
