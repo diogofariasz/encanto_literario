@@ -65,18 +65,20 @@ input[type="password"]::-webkit-show-password-button {
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.6);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   transition: 500ms;
 }
 
 .modal-active {
   opacity: 1;
-  visibility: visible;
+  visibility: visible !important;
 }
 
 .modal-close {
-  width: 100%;
-  display: flex;
-  justify-content: end;
+  align-self: flex-end;
   color: var(--purple-1);
   cursor: pointer;
 }

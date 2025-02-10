@@ -129,3 +129,39 @@ const criarElemento = (tag, { text = '', className = '', children = [], attribut
 
   return elemento;
 };
+
+// Funcionalidades do Modal
+
+const modalElement = document.querySelector('.modal');
+
+const modalList = [];
+
+Array.from(modalElement.children).forEach((modalChild, index) => {
+  const closeModalElement = modalChild.querySelector('.modal-close');
+
+  if (closeModalElement) {
+    const className = modalChild.className;
+
+    const closeModal = () => {
+      document.body.classList.remove('no-scroll');
+      modalElement.classList.remove('modal-active');
+      modalChild.classList.remove('modal-active');
+    };
+
+    const openModal = () => {
+      document.body.classList.add('no-scroll');
+      modalElement.classList.add('modal-active');
+      modalChild.classList.add('modal-active');
+    };
+
+    closeModalElement.addEventListener('click', () => {
+      closeModal();
+    });
+
+    modalList.push({ className, openModal, closeModal });
+  }
+});
+
+function getModalByClassName(className) {
+  return modalList.find((modal) => modal.className == className);
+}

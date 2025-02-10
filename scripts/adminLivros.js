@@ -20,7 +20,11 @@ if (livrosContainerElement) {
 
     livrosContainerElement.appendChild(bookElement);
 
-    bookElement.addEventListener('click', () => {})
+    bookElement.addEventListener('click', () => {
+      const modal = getModalByClassName('crud-options');
+
+      modal.openModal();
+    });
   });
 } else {
   console.error('Elemento .livros-container não encontrado');

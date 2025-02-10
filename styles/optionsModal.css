@@ -1,0 +1,22 @@
+:root {
+  --container-width: 20rem;
+}
+
+.crud-options {
+  visibility: hidden;
+  background-color: var(--gray-3);
+  position: absolute;
+  border-radius: 16px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: var(--container-width);
+}
+
+.crud-options-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
