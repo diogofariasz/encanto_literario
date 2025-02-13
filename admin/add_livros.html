@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Usuário</title>
+    <title>Adicionar Livros</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
 
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/cart.css" />
-    <link rel="stylesheet" href="styles/hero.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/usuario.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/livros.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/hero.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
 
-    <script defer src="scripts/data.js"></script>
-    <script defer src="scripts/utils.js"></script>
-    <script defer src="scripts/cart.js"></script>
-    <script defer src="scripts/mobile.js"></script>
+    <script defer src="../scripts/data.js"></script>
+    <script defer src="../scripts/utils.js"></script>
+    <script defer src="../scripts/cart.js"></script>
+    <script defer src="../scripts/mobile.js"></script>
+    <script defer src="../scripts/alert.js"></script>
 
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer>
@@ -47,7 +50,7 @@
 
           <!-- Campo do logotipo -->
           <a href="/" class="header-logo">
-            <img src="assets/logo.svg" alt="logo" />
+            <img src="../assets/logo.svg" alt="logo" />
             <p>Encanto Literário</p>
           </a>
 
@@ -59,7 +62,7 @@
             </div>
 
             <!-- Botão da área do usuário -->
-            <a href="cadastro.html" class="button" style="background-color: var(--gray-3)">
+            <a href="../cadastro.html" class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
             </a>
           </div>
@@ -93,13 +96,9 @@
             </div>
 
             <!-- Botão do usuário mobile -->
-            <div
-              onclick="window.location.href = './cadastro.html'"
-              class="button"
-              style="background-color: var(--gray-3)"
-            >
+            <a href="../cadastro.html" class="button" style="background-color: var(--gray-3)">
               <i data-lucide="user-round" style="color: var(--purple-3)"></i>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -159,42 +158,49 @@
     <!--AQUI SE MEXE EM TODO O CONTEUDO DA PÁGINA-->
     <div class="user-container">
       <div class="user-dashboard">
-        <img src="assets/user-default-pic.svg" alt="" />
+        <img src="../assets/user-default-pic.svg" alt="" />
 
         <div class="user-options">
-          <a href="#"><p>Informações & Formulários</p></a>
+          <a class="user-back" href="../admin.html">
+            <i data-lucide="arrow-left"></i>
+          </a>
         </div>
       </div>
 
-      <div class="user-informations">
-        <p>Nome de Usuário: admin</p>
-
-        <div class="user-informations-buttons">
-          <button
-            class="btn"
-            onclick="window.location.href='pages-admin/add_livros.html'"
-            type="button"
-          >
-            Adicionar Livros
-          </button>
-          <button
-            class="btn"
-            onclick="window.location.href='pages-admin/list_livros.html'"
-            type="button"
-          >
-            Listar Livros
-          </button>
-
-          <button
-            class="btn"
-            onclick="window.location.href='pages-admin/add_autor.html'"
-            type="button"
-          >
-            Adicionar Autor
-          </button>
-          
+      <form class="user-informations">
+        <div class="input-container">
+          <label for="title">Título do Livro</label>
+          <input id="title" type="text" placeholder="Título" />
         </div>
-      </div>
+        <div class="input-container">
+          <label for="desc">Descrição do Livro</label>
+          <textarea id="desc" placeholder="Descrição"></textarea>
+        </div>
+
+        <div class="input-container">
+          <label for="price">Preço do Livro</label>
+          <input id="price" type="number" placeholder="R$ 00,00" />
+        </div>
+
+        <div class="input-container">
+          <label for="cape">Capa do Livro</label>
+          <input type="file" id="cape" name="cape" accept="image/png, image/jpeg" />
+        </div>
+
+        <div class="input-container">
+          <label for="cape">Autor do Livro</label>
+          <input id="cape" type="text" placeholder="Autor" />
+        </div>
+
+        <div class="input-container">
+          <label for="category">Categoria do Livro</label>
+          <input id="category" type="text" placeholder="Categoria" />
+        </div>
+
+        <button class="button" type="submit" data-msg="Livro criado com sucesso">
+          Adicionar Livro
+        </button>
+      </form>
     </div>
 
     <!-- Rodapé -->

@@ -16,13 +16,14 @@
     <link rel="stylesheet" href="../styles/cart.css" />
     <link rel="stylesheet" href="../styles/hero.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/adm.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/optionsModal.css" />
 
     <script defer src="../scripts/data.js"></script>
     <script defer src="../scripts/utils.js"></script>
     <script defer src="../scripts/cart.js"></script>
     <script defer src="../scripts/mobile.js"></script>
-    <script defer src="../scripts/alert.js"></script>
+    <script defer src="../scripts/adminLivros.js"></script>
 
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer>
@@ -161,31 +162,29 @@
         <img src="../assets/user-default-pic.svg" alt="" />
 
         <div class="user-options">
-          <a class="user-back" href="../adm.html">
+          <a class="user-back" href="../admin.html">
             <i data-lucide="arrow-left"></i>
           </a>
         </div>
       </div>
 
-      <form class="user-informations">
-        <div class="input-container">
-          <label for="name">Nome do Autor</label>
-          <input id="name" type="text" placeholder="Nome" />
-        </div>
-        <div class="input-container">
-          <label for="bio">Nome do Biografia</label>
-          <textarea id="bio" placeholder="Biografia"></textarea>
-        </div>
-
-        <div class="input-container">
-          <label for="avatar">Foto do Autor</label>
-          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
-        </div>
-
-        <button class="button" type="submit" data-msg="Autor criado com sucesso">
-          Adicionar Autor
-        </button>
-      </form>
+      <div class="user-informations">
+        <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Título</th>
+                  <th>Preço</th>
+                  <th>URL Capa</th>
+                  <th>Autor</th>
+                  <th>Categoria</th>
+                  <th>Descrição</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+      </div>
     </div>
 
     <!-- Rodapé -->
@@ -245,6 +244,17 @@
 
     <!-- Conteúdo do Modal -->
     <div class="modal">
+      <div class="crud-options">
+        <div class="modal-close">
+          <i data-lucide="x"></i>
+        </div>
+
+        <div class="crud-options-buttons">
+          <div class="button">Alterar</div>
+          <div class="button">Excluir</div>
+        </div>
+      </div>
+
       <div class="cart-container">
         <div class="modal-close">
           <i data-lucide="x"></i>
