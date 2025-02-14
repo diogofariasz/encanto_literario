@@ -9,10 +9,12 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/formulario.css" />
 
     <script defer src="scripts/utils.js"></script>
     <script defer src="scripts/data.js"></script>
+    <script defer src="scripts/mobile.js"></script>
     <script defer src="scripts/login.js"></script>
 
     <script defer src="https://unpkg.com/lucide@latest"></script>
@@ -23,6 +25,129 @@
     </script>
   </head>
   <body>
+    <!-- Cabeçalho -->
+    <header class="header">
+      <!-- Parte superior do cabeçalho -->
+      <div class="header-top">50% de Desconto em Todos os Livros (Apenas hoje)</div>
+
+      <!-- Parte do meio do cabeçalho -->
+      <div class="header-mid">
+        <div class="header-mid-container">
+          <!-- Caixa de pesquisa -->
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+
+          <!-- Campo do logotipo -->
+          <a href="/" class="header-logo">
+            <img src="assets/logo.svg" alt="logo" />
+            <p>Encanto Literário</p>
+          </a>
+
+          <!-- Botões de ação do cabeçalho -->
+          <div class="header-buttons">
+            <!-- Botão do carrinho -->
+            <div class="button cart" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
+            <!-- Botão da área do usuário -->
+            <a href="cadastro.html" class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+            </a>
+          </div>
+
+          <!-- Botão do menu hamburguer mobile -->
+          <div class="header-mid-hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parte inferior do cabeçalho -->
+      <nav class="header-bottom">
+        <!-- Parte mobile -->
+        <div class="header-mid-mobile">
+          <!-- Caixa de pesquisa mobile -->
+          <div class="input-container">
+            <input type="text" placeholder="O que você deseja?" id="search" />
+            <div class="button">
+              <i data-lucide="search" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+
+          <!-- Botões de ação mobile -->
+          <div class="header-buttons">
+            <!-- Botão do carrinho mobile -->
+            <div class="button cart" style="background-color: var(--gray-3)">
+              <i data-lucide="shopping-cart" style="color: var(--purple-3)"></i>
+            </div>
+
+            <!-- Botão do usuário mobile -->
+            <div onclick="window.location.href = './cadastro.html'" class="button" style="background-color: var(--gray-3)">
+              <i data-lucide="user-round" style="color: var(--purple-3)"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- container da parte inferior do cabeçalho -->
+        <div class="header-bottom-container">
+          <!-- Menu suspenso de categorias de livro -->
+          <div class="dropdown">
+            <!-- Parte visivel (botão do menu visivel) -->
+            <div class="navigation-button">
+              <p>Categorias de Livro</p>
+              <i data-lucide="chevron-down"></i>
+            </div>
+
+            <!-- Parte do botão que aparece quando passa o mouse -->
+            <div class="dropdown-menu">
+              <a class="dropdown-menu-option" href="/#livros">Qualquer</a>
+              <a class="dropdown-menu-option" href="/?category=fantasia#livros">Fantasia</a>
+              <a class="dropdown-menu-option" href="/?category=mistério#livros">Mistério</a>
+              <a class="dropdown-menu-option" href="/?category=investigação#livros">Investigação</a>
+              <a class="dropdown-menu-option" href="/?category=autoajuda#livros">Autoajuda</a>
+              <a class="dropdown-menu-option" href="/?category=infantil#livros">Infantil</a>
+              <a class="dropdown-menu-option" href="/?category=educação financeira#livros"
+                >Educação financeira</a
+              >
+            </div>
+          </div>
+
+          <!-- Menu suspenso de categorias de manga -->
+          <div class="dropdown">
+            <!-- Parte visivel (botão do menu visivel) -->
+            <div class="navigation-button">
+              <p>Categorias de Mangá</p>
+              <i data-lucide="chevron-down"></i>
+            </div>
+
+            <!-- Parte do botão que aparece quando passa o mouse -->
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-option">Fantasia</div>
+            </div>
+          </div>
+
+          <!-- Botão de navegação de Livros mais vendios -->
+          <div class="navigation-button" style="background-color: var(--purple-4)">
+            <p>Mais Vendidos</p>
+            <i data-lucide="trending-up"></i>
+          </div>
+
+          <!-- Botão de navegação de Ofertas do dia -->
+          <div class="navigation-button" style="background-color: var(--purple-4)">
+            <p>Ofertas do Dia</p>
+            <i data-lucide="badge-percent"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <section class="form-container">
       <form class="form">
         <h1>Entrar</h1>
